@@ -8,3 +8,9 @@ provider "ciscofdm" {
 resource "ciscofdm_dummy" "my-server" {
   address = "1.2.3.4"
 }
+
+resource "ciscofdm_networkobject" "myobject" {
+  name = "GS-Terraform"
+  subtype = "HOST"
+  value = "2.2.2.2"
+}
