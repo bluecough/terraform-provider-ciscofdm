@@ -26,6 +26,7 @@ func resourceNetworkObject() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
+
 		},
 	}
 }
@@ -42,10 +43,13 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 	if err != nil {
 		glog.Errorf("error: %s\n", err)
 	}
+	d.SetId(n.ID)
 	return resourceServerRead(d, m)
 }
 
 func resourceNetworkObjectRead(d *schema.ResourceData, m interface{}) error {
+	cf := m.(*goftd.FTD)
+	cf.GetNetworkObjects(100)
 	return nil
 }
 
@@ -55,5 +59,14 @@ func resourceNetworkObjectUpdate(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceNetworkObjectDelete(d *schema.ResourceData, m interface{}) error {
+
+	cf := m.(*goftd.FTD)
+	id := d.Id()
+
+	err := cf.DeleteNetworkObjectByID(id)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
