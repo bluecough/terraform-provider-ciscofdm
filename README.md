@@ -36,3 +36,26 @@ provider "ciscofdm" {
 | `username`          | The Username to login to the FDM                                                        | `Required` |
 | `password`          | The Password to login to the FDM                                                        | `Required` |
 | `ssl_no_verify`     | Boolean to ignore self signed certs                                                     | `Required` |
+
+
+## Resources
+### `ciscofdm_networkobject`
+
+A resource for managing FDM network objects.
+
+#### Example
+
+```hcl
+provider "ciscofdm" {
+  api_url = "192.168.128.30"
+  username = "admin"
+  password = "Admin123"
+  ssl_no_verify = true
+}
+
+resource "ciscofdm_networkobject" "myobject" {
+  name = "Terraform Network Object"
+  subtype = "HOST"
+  value = "2.2.2.3"
+}
+```
