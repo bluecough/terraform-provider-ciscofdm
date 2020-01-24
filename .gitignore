@@ -3,3 +3,5 @@ terraform.tfstate
 terraform.tfstate*
 .idea
 .terraform
+go.mod
+go.sum
