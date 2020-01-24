@@ -49,12 +49,30 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 
 func resourceNetworkObjectRead(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
-	cf.GetNetworkObjects(100)
+	cf.GetNetworkObjectByID(d.Id())
 	return nil
 }
 
 func resourceNetworkObjectUpdate(d *schema.ResourceData, m interface{}) error {
+	cf := m.(*goftd.FTD)
 
+	existing := new(goftd.NetworkObject)
+	existing, err := cf.GetNetworkObjectByID(d.Id())
+
+	n := new(goftd.NetworkObject)
+	n.ID = d.Id()
+	n.Name = d.Get("name").(string)
+	n.SubType = d.Get("subtype").(string)
+	n.Value = d.Get("value").(string)
+	n.Type = "networkobject"
+	n.Version = existing.Version
+
+	cf.UpdateNetworkObject(n)
+	if err != nil {
+		glog.Errorf("error: %s\n", err)
+	}
+
+	//d.SetId(n.ID)
 	return resourceServerRead(d, m)
 }
 

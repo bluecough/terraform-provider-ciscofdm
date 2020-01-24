@@ -12,5 +12,5 @@ resource "ciscofdm_dummy" "my-server" {
 resource "ciscofdm_networkobject" "myobject" {
   name = "GS-Terraform"
   subtype = "HOST"
-  value = "2.2.2.2"
+  value = "2.2.2.3"
 }
