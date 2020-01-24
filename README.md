@@ -21,7 +21,7 @@ Download and build the latest release and copy to your terraform plugin director
 
 ### Example
 
-Example provider with SSL client authentication.
+Example provider:
 ```hcl
 provider "ciscofdm" {
   api_url = "192.168.128.30"
