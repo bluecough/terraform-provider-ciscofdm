@@ -17,6 +17,11 @@ Installation
 ------------
 Download and build the latest release and copy to your terraform plugin directory (typically ~/.terraform.d/plugins/)
 
+Alternatively you can build it.
+```
+$ go mod init terraform-provider-ciscofdm 
+$ go build
+```
 ## Provider Configuration
 
 ### Example
