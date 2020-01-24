@@ -30,9 +30,9 @@ provider "ciscofdm" {
   ssl_no_verify = true
 }
 ```
-| Property            | Description                                                           | Default    |
-| ------------------- | --------------------------------------------------------------------- | ---------- |
-| `api_url`           | The IP address of the FDM                                             | `Required` |
-| `username`          | The Username to login to the FDM                                      | `Required` |
-| `password`          | The Password to login to the FDM                                      | `Required` |
-| `ssl_no_verify`     | Boolean to ignore self signed certs                                   | `Required` |
+| Property            | Description                                                                             | Default    |
+| ------------------- | --------------------------------------------------------------------------------------- | ---------- |
+| `api_url`           | The IP address of the FDM                                                               | `Required` |
+| `username`          | The Username to login to the FDM                                                        | `Required` |
+| `password`          | The Password to login to the FDM                                                        | `Required` |
+| `ssl_no_verify`     | Boolean to ignore self signed certs                                                     | `Required` |
