@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/golang/glog"
-	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	"fmt"
 	"github.com/bluecough/go-ftd"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
 func resourceNetworkObject() *schema.Resource {
@@ -41,7 +41,7 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 
 	err := cf.CreateNetworkObject(n, goftd.DuplicateActionReplace)
 	if err != nil {
-		glog.Errorf("error: %s\n", err)
+		fmt.Errorf("error: %s\n", err)
 	}
 	d.SetId(n.ID)
 	return resourceServerRead(d, m)
@@ -67,9 +67,9 @@ func resourceNetworkObjectUpdate(d *schema.ResourceData, m interface{}) error {
 	n.Type = "networkobject"
 	n.Version = existing.Version
 
-	cf.UpdateNetworkObject(n)
+	err = cf.UpdateNetworkObject(n)
 	if err != nil {
-		glog.Errorf("error: %s\n", err)
+		fmt.Errorf("error: %s\n", err)
 	}
 
 	//d.SetId(n.ID)
