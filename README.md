@@ -30,3 +30,9 @@ provider "ciscofdm" {
   ssl_no_verify = true
 }
 ```
+| Property            | Description                                                                                                           | Default    |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `bootstrap_servers` | A list of host:port addresses that will be used to discover the full set of alive brokers                             | `Required` |
+| `ca_cert`           | The CA certificate or path to a CA certificate file to validate the server's certificate.                             | `""`       |
+| `client_cert`       | The client certificate or path to a file containing the client certificate -- Use for Client authentication to Kafka. | `""`       |
+
