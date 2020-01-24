@@ -15,5 +15,5 @@ Requirements
 
 Installation
 ------------
-Download and extract the latest release to your terraform plugin directory (typically ~/.terraform.d/plugins/)
+Download and build the latest release and copy to your terraform plugin directory (typically ~/.terraform.d/plugins/)
 
