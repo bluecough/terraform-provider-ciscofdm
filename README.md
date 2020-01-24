@@ -68,6 +68,6 @@ resource "ciscofdm_networkobject" "myobject" {
 
 | Property             | Description                                                                     | Default |
 | -------------------- | ------------------------------------------------------------------------------- | ------- |
-| `name`               | Name you wish to call the network object                                        |  `Required`       |
-| `subtype`            | String type that can only be HOST or NETWORK. Note there is not string checking |  `Required`       |
-| `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY . Again there is no checking.           |  `Required`   |
+| `name`               | Name you wish to call the network object                                        |  Required       |
+| `subtype`            | String type that can only be HOST or NETWORK. Note there is not string checking |  Required       |
+| `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY . Again there is no checking.           |  Required   |
