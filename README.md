@@ -17,3 +17,16 @@ Installation
 ------------
 Download and build the latest release and copy to your terraform plugin directory (typically ~/.terraform.d/plugins/)
 
+## Provider Configuration
+
+### Example
+
+Example provider with SSL client authentication.
+```hcl
+provider "ciscofdm" {
+  api_url = "192.168.128.30"
+  username = "admin"
+  password = "Admin123"
+  ssl_no_verify = true
+}
+```
