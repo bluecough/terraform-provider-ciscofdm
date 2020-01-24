@@ -44,7 +44,7 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 		fmt.Errorf("error: %s\n", err)
 	}
 	d.SetId(n.ID)
-	return resourceServerRead(d, m)
+	return resourceNetworkObjectRead(d, m)
 }
 
 func resourceNetworkObjectRead(d *schema.ResourceData, m interface{}) error {
@@ -73,7 +73,7 @@ func resourceNetworkObjectUpdate(d *schema.ResourceData, m interface{}) error {
 	}
 
 	//d.SetId(n.ID)
-	return resourceServerRead(d, m)
+	return resourceNetworkObjectRead(d, m)
 }
 
 func resourceNetworkObjectDelete(d *schema.ResourceData, m interface{}) error {

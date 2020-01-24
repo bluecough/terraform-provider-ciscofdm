@@ -1,8 +1,8 @@
 package main
 
 import (
-//	"fmt"
-//	"github.com/bluecough/go-ftd"
+	"fmt"
+	"github.com/bluecough/go-ftd"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
@@ -49,8 +49,17 @@ func resourceNetworkObjectGroup() *schema.Resource {
 }
 
 func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) error {
+	cf := m.(*goftd.FTD)
 
-	return resourceServerRead(d, m)
+	n := new(goftd.NetworkObjectGroup)
+	n.Name = d.Get("name").(string)
+	n.Objects = d.Get("objects").([]*goftd.ReferenceObject)
+
+	err := cf.CreateNetworkObjectGroup(n,goftd.DuplicateActionReplace )
+	if err != nil{
+		fmt.Errorf("error: %s\n", err)
+	}
+	return resourceNetworkObjectGroupRead(d, m)
 }
 
 func resourceNetworkObjectGroupRead(d *schema.ResourceData, m interface{}) error {
@@ -60,7 +69,7 @@ func resourceNetworkObjectGroupRead(d *schema.ResourceData, m interface{}) error
 
 func resourceNetworkObjectGroupUpdate(d *schema.ResourceData, m interface{}) error {
 
-	return resourceServerRead(d, m)
+	return resourceNetworkObjectGroupRead(d, m)
 }
 
 func resourceNetworkObjectGroupDelete(d *schema.ResourceData, m interface{}) error {
