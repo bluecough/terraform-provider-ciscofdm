@@ -64,7 +64,7 @@ func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) err
     entries := d.Get("objects").(*schema.Set)
 
     var batchEntries = []*goftd.ReferenceObject{}
-	n.Objects = batchEntries
+
 
     for _, vRaw := range entries.List() {
     	val := vRaw.(map[string]interface{})
@@ -76,6 +76,7 @@ func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) err
 			Type:    val["type"].(string),
 		})
 	}
+	n.Objects = batchEntries
 	err := cf.CreateNetworkObjectGroup(n, goftd.DuplicateActionReplace)
    // log.Println(&n.Objects[0].Name)
 	d.SetId(n.Name)
