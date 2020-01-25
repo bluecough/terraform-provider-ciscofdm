@@ -5,3 +5,6 @@ terraform.tfstate*
 .terraform
 go.mod
 go.sum
+crash.log
+terrun.sh
+terraform.log
