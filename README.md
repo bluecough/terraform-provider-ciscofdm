@@ -46,7 +46,7 @@ provider "ciscofdm" {
 ## Resources
 ### `ciscofdm_networkobject`
 
-A resource for managing FDM NetworkObjects. There are a couple of fields that can have certain values but no checking of input has been done, so note the column where it says checking.
+A resource for managing FDM NetworkObjects. There are a couple of fields that can have certain values but no checking of input has been done.
 
 #### Example
 
@@ -66,11 +66,11 @@ resource "ciscofdm_networkobject" "myobject" {
 ```
 #### Properties
 
-| Property             | Description                                                                     | Default |  Checking      |
+| Property             | Description                                                                     | Default |  Valid Values      |
 | -------------------- | ------------------------------------------------------------------------------- | ------- | ------- |
 | `name`               | Name you wish to call the network object                                        |  Required|       |
-| `subtype`            | String type that can only be HOST or NETWORK.                                   |  Required|  No   |
-| `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY            |  Required |  No   |
+| `subtype`            | String type that can only be HOST or NETWORK.                                   |  Required|  HOST, NETWORK  |
+| `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY            |  Required |  X.X.X.X , X.X.X.X/YY   |
 
 
 ### `ciscofdm_networkobjectgroup`
@@ -94,13 +94,13 @@ resource "ciscofdm_networkobjectgroup" "myobjectgroup" {
 }
 ```
 
-| Property    | Description                                                                     | Default |  Checking |
+| Property    | Description                                                                     | Default |  Valid Values |
 | ----------- | ------------------------------------------------------------------------------- | ------- | --------- |
 | name        | Name of the NetworkObjectGroup you would like to create                         | Required|           |
-| objects     | Value that can be repeated so that your group can have one or more NetworkObjects. It can only be called 'object'. | Required | No |
+| objects     | Value that can be repeated so that your group can have one or more NetworkObjects. It can only be called 'object'. | Required | object |
 | netname     | Name of the NetworkObject you would like to add to the group                    | Required|   |
-| type        | This is the type under the 'objects' key:value. It should always be 'networkobject' | Required | No |
-| type        | This should always be networkobjectgroup                                        | Required | No |
+| type        | This is the type under the 'objects' key:value. It should always be 'networkobject' | Required | networkobject |
+| type        | This should always be networkobjectgroup                                        | Required | networkobjectgroup |
 
 
 
