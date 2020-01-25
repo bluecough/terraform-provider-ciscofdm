@@ -46,7 +46,7 @@ provider "ciscofdm" {
 ## Resources
 ### `ciscofdm_networkobject`
 
-A resource for managing FDM NetworkObjects.
+A resource for managing FDM NetworkObjects. There are a couple of fields that can have certain values but no checking of input has been done, so note the column where it says checking.
 
 #### Example
 
@@ -67,10 +67,10 @@ resource "ciscofdm_networkobject" "myobject" {
 #### Properties
 
 | Property             | Description                                                                     | Default |  Checking      |
-| -------------------- | ------------------------------------------------------------------------------- | ------- | -------
+| -------------------- | ------------------------------------------------------------------------------- | ------- | ------- |
 | `name`               | Name you wish to call the network object                                        |  Required|  No   |
-| `subtype`            | String type that can only be HOST or NETWORK. Note there is not string checking |  Required|  No   |
-| `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY . Again there is no checking.           |  Required |  No   |
+| `subtype`            | String type that can only be HOST or NETWORK.                                   |  Required|  No   |
+| `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY            |  Required |  No   |
 
 
 ### `ciscofdm_networkobjectgroup`
