@@ -92,6 +92,8 @@ resource "ciscofdm_networkobjectgroup" "myobjectgroup" {
   }
   type = "networkobjectgroup"
 }
+```
+
 | Property    | Description                                                                     | Default |  Checking |
 | ----------- | ------------------------------------------------------------------------------- | ------- | --------- |
 | name        | Name of the NetworkObjectGroup you would like to create                         | Required|           |
