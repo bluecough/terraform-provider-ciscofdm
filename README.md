@@ -46,7 +46,7 @@ provider "ciscofdm" {
 ## Resources
 ### `ciscofdm_networkobject`
 
-A resource for managing FDM network objects.
+A resource for managing FDM NetworkObjects.
 
 #### Example
 
