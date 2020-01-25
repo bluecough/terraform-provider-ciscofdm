@@ -15,7 +15,7 @@ Requirements
 
 Installation
 ------------
-Download and build the latest release and copy to your terraform plugin directory (typically ~/.terraform.d/plugins/)
+Download and build the latest [release](https://github.com/bluecough/terraform-provider-ciscofdm/releases) and copy to your terraform plugin directory (typically ~/.terraform.d/plugins/)
 
 Alternatively you can build it.
 ```
