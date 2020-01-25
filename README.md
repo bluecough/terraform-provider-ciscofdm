@@ -71,3 +71,34 @@ resource "ciscofdm_networkobject" "myobject" {
 | `name`               | Name you wish to call the network object                                        |  Required|  No   |
 | `subtype`            | String type that can only be HOST or NETWORK. Note there is not string checking |  Required|  No   |
 | `value`              | If its a host simply put the IP address. If its a NETWORK X.X.X.X/YY . Again there is no checking.           |  Required |  No   |
+
+
+### `ciscofdm_networkobjectgroup`
+
+To place NetworkObjects into groups
+
+#### Example
+
+```
+resource "ciscofdm_networkobjectgroup" "myobjectgroup" {
+  name = "myNetworkGroup"
+  objects {
+     netname = "any-ipv6"
+     type = "networkobject"
+  }
+  objects {
+     netname = "SomeOtherNet"
+     type = "networkobject"
+  }
+  type = "networkobjectgroup"
+}
+| Property    | Description                                                                     | Default |  Checking |
+| ----------- | ------------------------------------------------------------------------------- | ------- | --------- |
+| name        | Name of the NetworkObjectGroup you would like to create                         | Required|           |
+| objects     | Value that can be repeated so that your group can have one or more NetworkObjects | Required | No |
+| netname     | Name of the NetworkObject you would like to add to the group                    | Required| No |
+| type        | This is the type under the 'objects' key:value. It should always be 'networkobject' | Required | No |
+| type        | This should always be networkobjectgroup                                        | Required | No |
+
+
+
