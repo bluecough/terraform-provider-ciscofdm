@@ -54,7 +54,7 @@ func resourceNetworkObjectGroup() *schema.Resource {
 func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
     total := d.Get("objects.#")
-    log.Println("GS DEBUG ===",total)
+    log.Println("GS DEBUG =====NetworkObjectGroupCreate==",total)
 
     n := new(goftd.NetworkObjectGroup)
     n.Name = d.Get("name").(string)
@@ -75,7 +75,7 @@ func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) err
 	n.Objects = batchEntries
 
 	err := cf.CreateNetworkObjectGroup(n, goftd.DuplicateActionReplace)
-   // log.Println(&n.Objects[0].Name)
+    log.Println("GS DEBUG ====== NetworkObjectGroupCreate==== ",n.ID)
 	d.SetId(n.ID)
 
 	if err != nil{

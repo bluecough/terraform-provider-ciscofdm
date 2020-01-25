@@ -44,13 +44,15 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 	if err != nil {
 		fmt.Errorf("error: %s\n", err)
 	}
-	log.Println("GS DEBUG =====NetworkObjectCreate====== ", n.ID)
+
+	//log.Println("GS DEBUG =====NetworkObjectCreate====== ", n.Version)
 	d.SetId(n.ID)
 	return resourceNetworkObjectRead(d, m)
 }
 
 func resourceNetworkObjectRead(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
+	log.Println("GS DEBUG === NetworkObjectRead== id ", d.Id())
 	cf.GetNetworkObjectByID(d.Id())
 	return nil
 }

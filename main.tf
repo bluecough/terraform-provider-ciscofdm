@@ -10,20 +10,20 @@ provider "ciscofdm" {
 #}
 
 resource "ciscofdm_networkobject" "myobject" {
-  name = "GS-Terraform"
+  name = "GS-Terraform2"
   subtype = "HOST"
   value = "2.2.2.3"
 }
 
-resource "ciscofdm_networkobjectgroup" "mygroup" {
-  name = "NetworkGroupGS"
-  objects {
-     netname = "any-ipv6"
-     type = "networkobject"
-  }
-  objects {
-     netname = "SomeOtherNet"
-     type = "networkobject"
-  }
-  type = "networkobjectgroup"
-}
+#resource "ciscofdm_networkobjectgroup" "mygroup" {
+#  name = "NetworkGroupGS"
+#  objects {
+#     netname = "any-ipv6"
+#     type = "networkobject"
+#  }
+#  objects {
+#     netname = "SomeOtherNet"
+#     type = "networkobject"
+#  }
+#  type = "networkobjectgroup"
+#}
