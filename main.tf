@@ -16,7 +16,7 @@ resource "ciscofdm_networkobject" "myobject" {
 }
 
 resource "ciscofdm_networkobjectgroup" "mygroup" {
-  name = "NetworkGroupGS"
+  name = "NetworkGroupGS2"
   objects {
      netname = "any-ipv6"
      type = "networkobject"

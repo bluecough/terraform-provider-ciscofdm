@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/bluecough/go-ftd"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	"log"
 )
 
 func resourceNetworkObject() *schema.Resource {
@@ -43,6 +44,7 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 	if err != nil {
 		fmt.Errorf("error: %s\n", err)
 	}
+	log.Println("GS DEBUG =====NetworkObjectCreate====== ", n.ID)
 	d.SetId(n.ID)
 	return resourceNetworkObjectRead(d, m)
 }
