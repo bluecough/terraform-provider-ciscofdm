@@ -1,0 +1,1147 @@
+2020/01/25 02:49:17 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:49:17 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:49:17 [INFO] CLI args: []string{"/usr/local/bin/terraform", "destroy"}
+2020/01/25 02:49:17 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:49:17 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:49:17 [INFO] CLI command args: []string{"destroy"}
+2020/01/25 02:49:17 [DEBUG] New state was assigned lineage "a7bf3370-4613-3a8c-3f18-4073332fed66"
+2020/01/25 02:49:17 [DEBUG] checking for provider in "."
+2020/01/25 02:49:17 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:49:17 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:49:17 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:17 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:49:17 [DEBUG] checking for provisioner in "."
+2020/01/25 02:49:17 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:49:17 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:17 [INFO] backend/local: starting Apply operation
+2020-01-25T02:49:17.306-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:17.328-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:17.330-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=18991
+2020-01-25T02:49:17.331-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:17.342-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:17.342-0500
+2020-01-25T02:49:17.365-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:17.365-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin383386986 network=unix timestamp=2020-01-25T02:49:17.365-0500
+2020-01-25T02:49:17.420-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=18991
+2020-01-25T02:49:17.421-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:17 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:49:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:49:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:49:17 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:17 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:49:17.422-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:17.445-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:17.447-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=18992
+2020-01-25T02:49:17.447-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:17.460-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:17.459-0500
+2020-01-25T02:49:17.485-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin237653823 network=unix timestamp=2020-01-25T02:49:17.485-0500
+2020-01-25T02:49:17.485-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:17.538-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=18992
+2020-01-25T02:49:17.538-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:17 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:49:17 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:49:17 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:49:17 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:49:17 [INFO] backend/local: apply calling Plan
+2020/01/25 02:49:17 [INFO] terraform: building graph: GraphTypePlanDestroy
+2020/01/25 02:49:17 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:49:17 [DEBUG] Starting graph walk: walkPlanDestroy
+2020/01/25 02:49:17 [DEBUG] command: asking for input: "Do you really want to destroy all resources?"
+2020/01/25 02:49:18 [INFO] backend/local: apply calling Apply
+2020/01/25 02:49:18 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:49:18 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:49:18 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:49:18 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:18 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:49:18 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:49:18 [DEBUG] Starting graph walk: walkDestroy
+2020-01-25T02:49:18.736-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:18.765-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:18.768-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=18993
+2020-01-25T02:49:18.768-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:18.783-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:18.783-0500
+2020-01-25T02:49:18.810-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:18.810-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin682623212 network=unix timestamp=2020-01-25T02:49:18.810-0500
+2020-01-25T02:49:19.565-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=18993
+2020-01-25T02:49:19.565-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:23 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:49:23 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:49:23 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:49:23 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:49:23 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:49:23 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:49:23 [DEBUG] New state was assigned lineage "3a1cb7e3-2831-faca-9e86-089aa6968d2d"
+2020/01/25 02:49:23 [DEBUG] checking for provider in "."
+2020/01/25 02:49:23 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:49:23 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:49:23 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:23 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:49:23 [DEBUG] checking for provisioner in "."
+2020/01/25 02:49:23 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:49:23 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:23 [INFO] backend/local: starting Apply operation
+2020-01-25T02:49:23.631-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:23.654-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:23.656-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19090
+2020-01-25T02:49:23.656-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:23.670-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:23.670-0500
+2020-01-25T02:49:23.695-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin395066081 network=unix timestamp=2020-01-25T02:49:23.695-0500
+2020-01-25T02:49:23.695-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:23.746-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19090
+2020-01-25T02:49:23.746-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:23 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:49:23 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:49:23 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:49:23 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:23 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:23 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:23 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:49:23.748-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:23.771-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:23.773-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19091
+2020-01-25T02:49:23.773-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:23.785-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:23.785-0500
+2020-01-25T02:49:23.808-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:23.808-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin075658974 network=unix timestamp=2020-01-25T02:49:23.808-0500
+2020-01-25T02:49:23.860-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19091
+2020-01-25T02:49:23.860-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:23 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:49:23 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:49:23 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:49:23 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:49:23 [INFO] backend/local: apply calling Plan
+2020/01/25 02:49:23 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:49:23 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:49:23 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:49:23 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:23 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:23 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:23 [DEBUG] Starting graph walk: walkPlan
+2020-01-25T02:49:23.862-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:23.883-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:23.885-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19092
+2020-01-25T02:49:23.885-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:23.897-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:23.897-0500
+2020-01-25T02:49:23.920-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:23.920-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin942102555 network=unix timestamp=2020-01-25T02:49:23.920-0500
+2020/01/25 02:49:24 [DEBUG] Resource instance state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:49:24 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:24 [DEBUG] Resource instance state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:49:24 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:49:24.716-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19092
+2020-01-25T02:49:24.716-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:24 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/01/25 02:49:26 [INFO] backend/local: apply calling Apply
+2020/01/25 02:49:26 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:49:26 [DEBUG] Resource state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:49:26 [DEBUG] Resource state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:49:26 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:26 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:49:26 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:49:26 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:26 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:49:26 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:49:26 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:26 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:26 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:26 [DEBUG] Starting graph walk: walkApply
+2020-01-25T02:49:26.916-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:26.945-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:26.947-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19093
+2020-01-25T02:49:26.947-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:26.962-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:26.962-0500
+2020-01-25T02:49:26.991-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin706868472 network=unix timestamp=2020-01-25T02:49:26.991-0500
+2020-01-25T02:49:26.991-0500 [DEBUG] plugin: using plugin: version=5
+2020/01/25 02:49:27 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Create change
+2020/01/25 02:49:27 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Create change
+2020-01-25T02:49:27.704-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:49:27 GS DEBUG === 1
+2020-01-25T02:49:27.796-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:49:27 any-ipv6
+2020-01-25T02:49:28.061-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19093
+2020-01-25T02:49:28.061-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:50 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:49:50 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:49:50 [INFO] CLI args: []string{"/usr/local/bin/terraform", "init"}
+2020/01/25 02:49:50 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:49:50 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:49:50 [INFO] CLI command args: []string{"init"}
+2020/01/25 02:49:50 [DEBUG] New state was assigned lineage "e6e5e001-904d-141b-3396-0edd9100d927"
+2020/01/25 02:49:50 [DEBUG] checking for provider in "."
+2020/01/25 02:49:50 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:49:50 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:49:50 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:50 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:49:50 [DEBUG] checking for provisioner in "."
+2020/01/25 02:49:50 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:49:50 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:50 [DEBUG] checking for provider in "."
+2020/01/25 02:49:50 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:49:50 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:49:50 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:50 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:49:50 [DEBUG] plugin requirements: "ciscofdm"=""
+2020/01/25 02:49:50 [DEBUG] checking for provider in "."
+2020/01/25 02:49:50 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:49:50 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:49:50 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:50 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:49:50 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:55 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:49:55 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:49:55 [INFO] CLI args: []string{"/usr/local/bin/terraform", "destroy"}
+2020/01/25 02:49:55 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:49:55 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:49:55 [INFO] CLI command args: []string{"destroy"}
+2020/01/25 02:49:55 [DEBUG] New state was assigned lineage "98a61d6f-729d-a7ea-f9d7-5fcda4ac0f3a"
+2020/01/25 02:49:55 [DEBUG] checking for provider in "."
+2020/01/25 02:49:55 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:49:55 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:49:55 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:55 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:49:55 [DEBUG] checking for provisioner in "."
+2020/01/25 02:49:55 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:49:55 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:49:55 [INFO] backend/local: starting Apply operation
+2020-01-25T02:49:55.706-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:55.729-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:55.731-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19508
+2020-01-25T02:49:55.731-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:55.973-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:55.973-0500
+2020-01-25T02:49:55.997-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:55.997-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin934771755 network=unix timestamp=2020-01-25T02:49:55.997-0500
+2020-01-25T02:49:56.046-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19508
+2020-01-25T02:49:56.046-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:56 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:49:56 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:49:56 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:56 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:49:56.047-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:56.070-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:56.072-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19509
+2020-01-25T02:49:56.072-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:56.084-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:56.084-0500
+2020-01-25T02:49:56.106-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:56.106-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin014402616 network=unix timestamp=2020-01-25T02:49:56.106-0500
+2020-01-25T02:49:56.163-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19509
+2020-01-25T02:49:56.163-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:56 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:49:56 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:49:56 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:49:56 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:56 [DEBUG] Starting graph walk: walkRefresh
+2020-01-25T02:49:56.164-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:56.185-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:56.188-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19510
+2020-01-25T02:49:56.188-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:56.200-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:56.200-0500
+2020-01-25T02:49:56.223-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:56.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin481017085 network=unix timestamp=2020-01-25T02:49:56.223-0500
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020-01-25T02:49:57.093-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19510
+2020-01-25T02:49:57.093-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:49:57 [INFO] backend/local: apply calling Plan
+2020/01/25 02:49:57 [INFO] terraform: building graph: GraphTypePlanDestroy
+2020/01/25 02:49:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlanDestroyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlanDestroyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:49:57 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:49:57 [DEBUG] Starting graph walk: walkPlanDestroy
+2020-01-25T02:49:57.094-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:57.122-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:57.125-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19511
+2020-01-25T02:49:57.125-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:57.139-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:57.138-0500
+2020-01-25T02:49:57.163-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:49:57.163-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin010088562 network=unix timestamp=2020-01-25T02:49:57.163-0500
+2020/01/25 02:49:57 [DEBUG] command: asking for input: "Do you really want to destroy all resources?"
+2020/01/25 02:49:58 [INFO] backend/local: apply calling Apply
+2020/01/25 02:49:58 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:49:58 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:49:58 DestroyEdgeTransformer: pruning unused resource node ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:49:58 DestroyEdgeTransformer: pruning unused resource node ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:49:58 [DEBUG] Starting graph walk: walkDestroy
+2020-01-25T02:49:58.190-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:49:58.222-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:49:58.223-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19512
+2020-01-25T02:49:58.224-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:49:58.239-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:49:58.238-0500
+2020-01-25T02:49:58.266-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin664913231 network=unix timestamp=2020-01-25T02:49:58.266-0500
+2020-01-25T02:49:58.266-0500 [DEBUG] plugin: using plugin: version=5
+2020/01/25 02:49:59 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Delete change
+2020/01/25 02:49:59 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Delete change
+2020-01-25T02:49:59.130-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19512
+2020-01-25T02:49:59.130-0500 [DEBUG] plugin: plugin exited
+2020-01-25T02:49:59.143-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19511
+2020-01-25T02:49:59.143-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:03 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:50:03 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:50:03 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:50:03 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:50:03 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:50:03 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:50:03 [DEBUG] New state was assigned lineage "dd494a9c-431d-d922-9c0e-fe6cc8536342"
+2020/01/25 02:50:03 [DEBUG] checking for provider in "."
+2020/01/25 02:50:03 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:50:03 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:50:03 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:03 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:50:03 [DEBUG] checking for provisioner in "."
+2020/01/25 02:50:03 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:50:03 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:03 [INFO] backend/local: starting Apply operation
+2020-01-25T02:50:03.217-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:03.239-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:03.241-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19609
+2020-01-25T02:50:03.241-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:03.253-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:03.253-0500
+2020-01-25T02:50:03.275-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:03.275-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin279725300 network=unix timestamp=2020-01-25T02:50:03.275-0500
+2020-01-25T02:50:03.329-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19609
+2020-01-25T02:50:03.329-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:03 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:50:03 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:50:03 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:50:03 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:03 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:03 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:03 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:50:03.331-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:03.354-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:03.356-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19610
+2020-01-25T02:50:03.356-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:03.368-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:03.368-0500
+2020-01-25T02:50:03.393-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin634366937 network=unix timestamp=2020-01-25T02:50:03.393-0500
+2020-01-25T02:50:03.393-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:03.444-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19610
+2020-01-25T02:50:03.444-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:03 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:50:03 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:50:03 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:50:03 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:50:03 [INFO] backend/local: apply calling Plan
+2020/01/25 02:50:03 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:50:03 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:50:03 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:50:03 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:03 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:03 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:03 [DEBUG] Starting graph walk: walkPlan
+2020-01-25T02:50:03.446-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:03.467-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:03.469-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19611
+2020-01-25T02:50:03.469-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:03.481-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:03.481-0500
+2020-01-25T02:50:03.506-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:03.507-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin998409934 network=unix timestamp=2020-01-25T02:50:03.506-0500
+2020/01/25 02:50:04 [DEBUG] Resource instance state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:50:04 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:04 [DEBUG] Resource instance state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:50:04 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:50:04.254-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19611
+2020-01-25T02:50:04.254-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:04 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/01/25 02:50:05 [INFO] backend/local: apply calling Apply
+2020/01/25 02:50:05 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:50:05 [DEBUG] Resource state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:50:05 [DEBUG] Resource state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:50:05 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:05 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:50:05 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:50:05 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:05 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:50:05 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:50:05 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:05 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:05 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:05 [DEBUG] Starting graph walk: walkApply
+2020-01-25T02:50:05.677-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:05.707-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:05.709-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19612
+2020-01-25T02:50:05.709-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:05.724-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:05.724-0500
+2020-01-25T02:50:05.751-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin882640347 network=unix timestamp=2020-01-25T02:50:05.751-0500
+2020-01-25T02:50:05.751-0500 [DEBUG] plugin: using plugin: version=5
+2020/01/25 02:50:06 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Create change
+2020/01/25 02:50:06 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Create change
+2020-01-25T02:50:06.461-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:50:06 GS DEBUG === 1
+2020-01-25T02:50:06.617-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:50:06 
+2020-01-25T02:50:07.022-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=19612
+2020-01-25T02:50:07.022-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:39 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:50:39 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:50:39 [INFO] CLI args: []string{"/usr/local/bin/terraform", "init"}
+2020/01/25 02:50:39 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:50:39 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:50:39 [INFO] CLI command args: []string{"init"}
+2020/01/25 02:50:39 [DEBUG] New state was assigned lineage "afa19c6d-593f-5c88-7b6e-a2cfddfaa62f"
+2020/01/25 02:50:39 [DEBUG] checking for provider in "."
+2020/01/25 02:50:39 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:50:39 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:50:39 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:39 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:50:39 [DEBUG] checking for provisioner in "."
+2020/01/25 02:50:39 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:50:39 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:39 [DEBUG] checking for provider in "."
+2020/01/25 02:50:39 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:50:39 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:50:39 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:39 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:50:39 [DEBUG] plugin requirements: "ciscofdm"=""
+2020/01/25 02:50:39 [DEBUG] checking for provider in "."
+2020/01/25 02:50:39 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:50:39 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:50:39 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:39 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:50:39 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:47 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:50:47 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:50:47 [INFO] CLI args: []string{"/usr/local/bin/terraform", "destroy"}
+2020/01/25 02:50:47 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:50:47 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:50:47 [INFO] CLI command args: []string{"destroy"}
+2020/01/25 02:50:47 [DEBUG] New state was assigned lineage "c371df5e-ef98-5c0a-a660-d94a498a6bdd"
+2020/01/25 02:50:47 [DEBUG] checking for provider in "."
+2020/01/25 02:50:47 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:50:47 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:50:47 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:47 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:50:47 [DEBUG] checking for provisioner in "."
+2020/01/25 02:50:47 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:50:47 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:47 [INFO] backend/local: starting Apply operation
+2020-01-25T02:50:47.318-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:47.342-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:47.345-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20022
+2020-01-25T02:50:47.345-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:47.578-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:47.577-0500
+2020-01-25T02:50:47.601-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:47.601-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin155960149 network=unix timestamp=2020-01-25T02:50:47.600-0500
+2020-01-25T02:50:47.651-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20022
+2020-01-25T02:50:47.651-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:47 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:50:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:50:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:50:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:47 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:47 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:50:47.653-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:47.674-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:47.676-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20023
+2020-01-25T02:50:47.676-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:47.689-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:47.689-0500
+2020-01-25T02:50:47.713-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin653637170 network=unix timestamp=2020-01-25T02:50:47.713-0500
+2020-01-25T02:50:47.713-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:47.768-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20023
+2020-01-25T02:50:47.768-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:47 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:50:47 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:50:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:50:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:50:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:47 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:47 [DEBUG] Starting graph walk: walkRefresh
+2020-01-25T02:50:47.769-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:47.794-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:47.796-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20024
+2020-01-25T02:50:47.796-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:47.808-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:47.808-0500
+2020-01-25T02:50:47.834-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:47.834-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin090100367 network=unix timestamp=2020-01-25T02:50:47.834-0500
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:50:48.615-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20024
+2020-01-25T02:50:48.615-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:48 [INFO] backend/local: apply calling Plan
+2020/01/25 02:50:48 [INFO] terraform: building graph: GraphTypePlanDestroy
+2020/01/25 02:50:48 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlanDestroyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:48 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlanDestroyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:48 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:48 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:48 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:48 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:50:48 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:48 [DEBUG] Starting graph walk: walkPlanDestroy
+2020-01-25T02:50:48.616-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:48.644-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:48.647-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20025
+2020-01-25T02:50:48.647-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:48.662-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:48.661-0500
+2020-01-25T02:50:48.688-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:48.688-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin374465604 network=unix timestamp=2020-01-25T02:50:48.688-0500
+2020/01/25 02:50:48 [DEBUG] command: asking for input: "Do you really want to destroy all resources?"
+2020/01/25 02:50:50 [INFO] backend/local: apply calling Apply
+2020/01/25 02:50:50 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:50:50 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:50 DestroyEdgeTransformer: pruning unused resource node ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:50:50 DestroyEdgeTransformer: pruning unused resource node ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:50:50 [DEBUG] Starting graph walk: walkDestroy
+2020-01-25T02:50:50.627-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:50.657-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:50.659-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20026
+2020-01-25T02:50:50.659-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:50.674-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:50.674-0500
+2020-01-25T02:50:50.701-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:50.701-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin697724369 network=unix timestamp=2020-01-25T02:50:50.701-0500
+2020/01/25 02:50:51 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Delete change
+2020/01/25 02:50:51 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Delete change
+2020-01-25T02:50:51.621-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20026
+2020-01-25T02:50:51.621-0500 [DEBUG] plugin: plugin exited
+2020-01-25T02:50:51.635-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20025
+2020-01-25T02:50:51.635-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:54 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:50:54 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:50:54 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:50:54 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:50:54 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:50:54 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:50:54 [DEBUG] New state was assigned lineage "c0afa984-106f-71f5-6e5e-39267c942edc"
+2020/01/25 02:50:54 [DEBUG] checking for provider in "."
+2020/01/25 02:50:54 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:50:54 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:50:54 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:54 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:50:54 [DEBUG] checking for provisioner in "."
+2020/01/25 02:50:54 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:50:54 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:50:54 [INFO] backend/local: starting Apply operation
+2020-01-25T02:50:55.051-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:55.074-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:55.076-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20124
+2020-01-25T02:50:55.076-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:55.089-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:55.089-0500
+2020-01-25T02:50:55.112-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin563966211 network=unix timestamp=2020-01-25T02:50:55.112-0500
+2020-01-25T02:50:55.112-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:55.161-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20124
+2020-01-25T02:50:55.161-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:55 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:50:55 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:50:55 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:50:55 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:55 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:55 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:55 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:50:55.163-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:55.185-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:55.187-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20125
+2020-01-25T02:50:55.187-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:55.200-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:55.200-0500
+2020-01-25T02:50:55.223-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:55.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin344149720 network=unix timestamp=2020-01-25T02:50:55.223-0500
+2020-01-25T02:50:55.274-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20125
+2020-01-25T02:50:55.274-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:55 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:50:55 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:50:55 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:50:55 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:50:55 [INFO] backend/local: apply calling Plan
+2020/01/25 02:50:55 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:50:55 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:50:55 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:50:55 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:55 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:55 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:55 [DEBUG] Starting graph walk: walkPlan
+2020-01-25T02:50:55.276-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:55.297-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:55.299-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20126
+2020-01-25T02:50:55.299-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:55.310-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:55.310-0500
+2020-01-25T02:50:55.333-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:50:55.333-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin117626413 network=unix timestamp=2020-01-25T02:50:55.333-0500
+2020/01/25 02:50:56 [DEBUG] Resource instance state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:50:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:56 [DEBUG] Resource instance state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:50:56 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020-01-25T02:50:56.063-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20126
+2020-01-25T02:50:56.063-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:50:56 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/01/25 02:50:57 [INFO] backend/local: apply calling Apply
+2020/01/25 02:50:57 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:50:57 [DEBUG] Resource state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:50:57 [DEBUG] Resource state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:50:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:50:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:50:57 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:50:57 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:50:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:50:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:50:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:50:57 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:50:57 [DEBUG] Starting graph walk: walkApply
+2020-01-25T02:50:57.349-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:50:57.379-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:50:57.382-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20127
+2020-01-25T02:50:57.382-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:50:57.397-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:50:57.397-0500
+2020-01-25T02:50:57.425-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin470682210 network=unix timestamp=2020-01-25T02:50:57.425-0500
+2020-01-25T02:50:57.425-0500 [DEBUG] plugin: using plugin: version=5
+2020/01/25 02:50:58 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Create change
+2020/01/25 02:50:58 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Create change
+2020-01-25T02:50:58.104-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:50:58 GS DEBUG === 1
+2020-01-25T02:50:58.177-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:50:58 networkobject
+2020-01-25T02:50:58.550-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20127
+2020-01-25T02:50:58.550-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:21 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:52:21 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:52:21 [INFO] CLI args: []string{"/usr/local/bin/terraform", "init"}
+2020/01/25 02:52:21 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:52:21 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:52:21 [INFO] CLI command args: []string{"init"}
+2020/01/25 02:52:21 [DEBUG] New state was assigned lineage "a1f694fb-a003-0b31-2e87-a50f935070ac"
+2020/01/25 02:52:21 [DEBUG] checking for provider in "."
+2020/01/25 02:52:21 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:52:21 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:52:21 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:21 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:52:21 [DEBUG] checking for provisioner in "."
+2020/01/25 02:52:21 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:52:21 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:21 [DEBUG] checking for provider in "."
+2020/01/25 02:52:21 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:52:21 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:52:21 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:21 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:52:21 [DEBUG] plugin requirements: "ciscofdm"=""
+2020/01/25 02:52:21 [DEBUG] checking for provider in "."
+2020/01/25 02:52:21 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:52:21 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:52:21 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:21 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:52:21 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:27 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:52:27 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:52:27 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:52:27 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:52:27 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:52:27 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:52:27 [DEBUG] New state was assigned lineage "26211294-7aab-2032-f3fd-f36b4f74e7ab"
+2020/01/25 02:52:27 [DEBUG] checking for provider in "."
+2020/01/25 02:52:27 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:52:27 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:52:27 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:27 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:52:27 [DEBUG] checking for provisioner in "."
+2020/01/25 02:52:27 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:52:27 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:27 [INFO] backend/local: starting Apply operation
+2020-01-25T02:52:27.997-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:28.018-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:28.020-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20535
+2020-01-25T02:52:28.020-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:28.261-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:28.261-0500
+2020-01-25T02:52:28.282-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:28.282-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin020202650 network=unix timestamp=2020-01-25T02:52:28.282-0500
+2020-01-25T02:52:28.332-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20535
+2020-01-25T02:52:28.332-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:28 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:52:28 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:52:28 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:52:28 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:28 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:28 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:28 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:52:28.334-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:28.356-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:28.359-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20536
+2020-01-25T02:52:28.359-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:28.371-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:28.371-0500
+2020-01-25T02:52:28.398-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:28.398-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin283699959 network=unix timestamp=2020-01-25T02:52:28.398-0500
+2020-01-25T02:52:28.450-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20536
+2020-01-25T02:52:28.450-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:28 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:52:28 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:52:28 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:52:28 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:52:28 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:28 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:28 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:28 [DEBUG] Starting graph walk: walkRefresh
+2020-01-25T02:52:28.452-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:28.475-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:28.478-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20537
+2020-01-25T02:52:28.478-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:28.489-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:28.489-0500
+2020-01-25T02:52:28.516-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:28.516-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin017785700 network=unix timestamp=2020-01-25T02:52:28.516-0500
+2020/01/25 02:52:29 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:29 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020-01-25T02:52:29.320-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20537
+2020-01-25T02:52:29.320-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:29 [INFO] backend/local: apply calling Plan
+2020/01/25 02:52:29 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:52:29 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:52:29 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:52:29 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:29 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:29 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:29 [DEBUG] Starting graph walk: walkPlan
+2020-01-25T02:52:29.321-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:29.348-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:29.351-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20538
+2020-01-25T02:52:29.351-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:29.365-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:29.365-0500
+2020-01-25T02:52:29.392-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin587618489 network=unix timestamp=2020-01-25T02:52:29.392-0500
+2020-01-25T02:52:29.392-0500 [DEBUG] plugin: using plugin: version=5
+2020/01/25 02:52:30 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:30 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:52:30.187-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20538
+2020-01-25T02:52:30.187-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:30 [INFO] backend/local: apply calling Apply
+2020/01/25 02:52:30 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:52:30 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:52:30 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:52:30 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:52:30 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:52:30 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:30 [DEBUG] Starting graph walk: walkApply
+2020-01-25T02:52:30.188-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:30.216-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:30.219-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20539
+2020-01-25T02:52:30.219-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:30.234-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:30.233-0500
+2020-01-25T02:52:30.260-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:30.260-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin452844814 network=unix timestamp=2020-01-25T02:52:30.260-0500
+2020-01-25T02:52:31.027-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20539
+2020-01-25T02:52:31.027-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:37 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:52:37 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:52:37 [INFO] CLI args: []string{"/usr/local/bin/terraform", "destroy"}
+2020/01/25 02:52:37 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:52:37 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:52:37 [INFO] CLI command args: []string{"destroy"}
+2020/01/25 02:52:37 [DEBUG] New state was assigned lineage "fd182a4e-d55a-4372-e1d9-80ac7cf47e1f"
+2020/01/25 02:52:37 [DEBUG] checking for provider in "."
+2020/01/25 02:52:37 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:52:37 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:52:37 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:37 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:52:37 [DEBUG] checking for provisioner in "."
+2020/01/25 02:52:37 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:52:37 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:37 [INFO] backend/local: starting Apply operation
+2020-01-25T02:52:37.676-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:37.699-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:37.702-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20636
+2020-01-25T02:52:37.702-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:37.714-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:37.714-0500
+2020-01-25T02:52:37.737-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin229315147 network=unix timestamp=2020-01-25T02:52:37.737-0500
+2020-01-25T02:52:37.737-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:37.787-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20636
+2020-01-25T02:52:37.788-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:37 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:52:37 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:52:37 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:52:37 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:37 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:37 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:37 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:52:37.790-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:37.811-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:37.814-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20637
+2020-01-25T02:52:37.814-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:37.825-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:37.825-0500
+2020-01-25T02:52:37.849-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:37.849-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: network=unix address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin497655168 timestamp=2020-01-25T02:52:37.849-0500
+2020-01-25T02:52:37.901-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20637
+2020-01-25T02:52:37.901-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:37 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:52:37 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:52:37 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:52:37 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeRefreshableManagedResource) needs provider.ciscofdm
+2020/01/25 02:52:37 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:37 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:37 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:37 [DEBUG] Starting graph walk: walkRefresh
+2020-01-25T02:52:37.903-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:37.926-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:37.928-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20638
+2020-01-25T02:52:37.928-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:37.942-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:37.941-0500
+2020-01-25T02:52:37.967-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:37.968-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin186980661 network=unix timestamp=2020-01-25T02:52:37.967-0500
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:52:38.820-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20638
+2020-01-25T02:52:38.820-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:38 [INFO] backend/local: apply calling Plan
+2020/01/25 02:52:38 [INFO] terraform: building graph: GraphTypePlanDestroy
+2020/01/25 02:52:38 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlanDestroyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:38 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlanDestroyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:38 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:38 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:38 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:38 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:52:38 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:38 [DEBUG] Starting graph walk: walkPlanDestroy
+2020-01-25T02:52:38.821-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:38.849-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:38.851-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20639
+2020-01-25T02:52:38.851-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:38.865-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:38.865-0500
+2020-01-25T02:52:38.891-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:38.891-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin105870218 network=unix timestamp=2020-01-25T02:52:38.891-0500
+2020/01/25 02:52:38 [DEBUG] command: asking for input: "Do you really want to destroy all resources?"
+2020/01/25 02:52:40 [INFO] backend/local: apply calling Apply
+2020/01/25 02:52:40 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeAbstractResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (destroy)" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (destroy)" references: []
+2020/01/25 02:52:40 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:40 DestroyEdgeTransformer: pruning unused resource node ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:52:40 DestroyEdgeTransformer: pruning unused resource node ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:52:40 [DEBUG] Starting graph walk: walkDestroy
+2020-01-25T02:52:40.242-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:40.271-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:40.273-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20640
+2020-01-25T02:52:40.273-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:40.288-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:40.288-0500
+2020-01-25T02:52:40.315-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:40.315-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin513528895 network=unix timestamp=2020-01-25T02:52:40.315-0500
+2020/01/25 02:52:41 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Delete change
+2020/01/25 02:52:41 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Delete change
+2020-01-25T02:52:41.131-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20640
+2020-01-25T02:52:41.131-0500 [DEBUG] plugin: plugin exited
+2020-01-25T02:52:41.144-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20639
+2020-01-25T02:52:41.144-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:45 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:52:45 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:52:45 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:52:45 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:52:45 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:52:45 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:52:45 [DEBUG] New state was assigned lineage "18581e27-07cd-5365-8e43-cbd35791666c"
+2020/01/25 02:52:45 [DEBUG] checking for provider in "."
+2020/01/25 02:52:45 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:52:45 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:52:45 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:45 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:52:45 [DEBUG] checking for provisioner in "."
+2020/01/25 02:52:45 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:52:45 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:52:45 [INFO] backend/local: starting Apply operation
+2020-01-25T02:52:45.231-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:45.254-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:45.256-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20737
+2020-01-25T02:52:45.256-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:45.268-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:45.268-0500
+2020-01-25T02:52:45.293-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:45.293-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin196987204 network=unix timestamp=2020-01-25T02:52:45.293-0500
+2020-01-25T02:52:45.343-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20737
+2020-01-25T02:52:45.343-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:45 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:52:45 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:52:45 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:52:45 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:45 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:45 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:45 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:52:45.344-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:45.366-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:45.368-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20738
+2020-01-25T02:52:45.368-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:45.382-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:45.382-0500
+2020-01-25T02:52:45.406-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:45.406-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin273842681 network=unix timestamp=2020-01-25T02:52:45.406-0500
+2020-01-25T02:52:45.457-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20738
+2020-01-25T02:52:45.457-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:45 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:52:45 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:52:45 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:52:45 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:52:45 [INFO] backend/local: apply calling Plan
+2020/01/25 02:52:45 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:52:45 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:52:45 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:52:45 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:45 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:45 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:45 [DEBUG] Starting graph walk: walkPlan
+2020-01-25T02:52:45.459-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:45.481-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:45.483-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20739
+2020-01-25T02:52:45.483-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:45.496-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:45.496-0500
+2020-01-25T02:52:45.522-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:52:45.522-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: network=unix address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin856077350 timestamp=2020-01-25T02:52:45.521-0500
+2020/01/25 02:52:46 [DEBUG] Resource instance state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:52:46 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:46 [DEBUG] Resource instance state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:52:46 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:52:46.375-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20739
+2020-01-25T02:52:46.375-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:52:46 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/01/25 02:52:47 [INFO] backend/local: apply calling Apply
+2020/01/25 02:52:47 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:52:47 [DEBUG] Resource state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:52:47 [DEBUG] Resource state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:52:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:52:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:52:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:47 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:52:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:52:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:52:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:52:47 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:52:47 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:52:47 [DEBUG] Starting graph walk: walkApply
+2020-01-25T02:52:47.302-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:52:47.331-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:52:47.335-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20740
+2020-01-25T02:52:47.336-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:52:47.351-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:52:47.351-0500
+2020-01-25T02:52:47.379-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin036563467 network=unix timestamp=2020-01-25T02:52:47.379-0500
+2020-01-25T02:52:47.379-0500 [DEBUG] plugin: using plugin: version=5
+2020/01/25 02:52:48 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Create change
+2020/01/25 02:52:48 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Create change
+2020-01-25T02:52:48.096-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:52:48 GS DEBUG === 1
+panic: runtime error: index out of range [0] with length 0
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: goroutine 54 [running]:
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: main.resourceNetworkObjectGroupCreate(0xc00011a930, 0x1bdd400, 0xc000596200, 0x2, 0x255c5c0)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/resource_networkobjectgroup.go:80 +0x6fe
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc000190a00, 0xc0000e2c30, 0xc000654be0, 0x1bdd400, 0xc000596200, 0xc0004d0501, 0xc00016be90, 0xc0004d0638)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/helper/schema/resource.go:305 +0x365
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc000190a80, 0xc0005c1918, 0xc0000e2c30, 0xc000654be0, 0xc0001ae1a8, 0xc00016c138, 0x1a817c0)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/helper/schema/provider.go:294 +0x99
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc00016c498, 0x1e371c0, 0xc00016adb0, 0xc000162c60, 0xc00016c498, 0xc00016adb0, 0xc000078a80)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/internal/helper/plugin/grpc_provider.go:885 +0x882
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1baefa0, 0xc00016c498, 0x1e371c0, 0xc00016adb0, 0xc000162c00, 0x0, 0x1e371c0, 0xc00016adb0, 0xc0001ac000, 0x120)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/internal/tfplugin5/tfplugin5.pb.go:3189 +0x217
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).processUnaryRPC(0xc0003f8000, 0x1e42aa0, 0xc00055e780, 0xc0004f8100, 0xc00016a570, 0x2530a60, 0x0, 0x0, 0x0)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:995 +0x460
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).handleStream(0xc0003f8000, 0x1e42aa0, 0xc00055e780, 0xc0004f8100, 0x0)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:1275 +0xd97
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc000188150, 0xc0003f8000, 0x1e42aa0, 0xc00055e780, 0xc0004f8100)
+2020-01-25T02:52:48.223-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:710 +0xbb
+2020-01-25T02:52:48.224-0500 [DEBUG] plugin.terraform-provider-ciscofdm: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-01-25T02:52:48.224-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:708 +0xa1
+2020-01-25T02:52:48.226-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=20740 error="exit status 2"
+2020/01/25 02:52:48 [DEBUG] ciscofdm_networkobject.myobject: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:52:48 [DEBUG] ciscofdm_networkobjectgroup.mygroup: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:52:48 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:52:48 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:52:48 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:52:48 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020-01-25T02:52:48.240-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:11 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:53:11 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:53:11 [INFO] CLI args: []string{"/usr/local/bin/terraform", "init"}
+2020/01/25 02:53:11 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:53:11 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:53:11 [INFO] CLI command args: []string{"init"}
+2020/01/25 02:53:11 [DEBUG] New state was assigned lineage "84c92f57-a172-4e85-18cb-d5bb18a34042"
+2020/01/25 02:53:11 [DEBUG] checking for provider in "."
+2020/01/25 02:53:11 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:53:11 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:53:11 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:11 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:53:11 [DEBUG] checking for provisioner in "."
+2020/01/25 02:53:11 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:53:11 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:11 [DEBUG] checking for provider in "."
+2020/01/25 02:53:11 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:53:11 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:53:11 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:11 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:53:11 [DEBUG] plugin requirements: "ciscofdm"=""
+2020/01/25 02:53:11 [DEBUG] checking for provider in "."
+2020/01/25 02:53:11 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:53:11 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:53:11 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:11 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:53:11 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:15 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:53:15 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:53:15 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:53:15 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:53:15 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:53:15 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:53:15 [DEBUG] New state was assigned lineage "513380eb-57a2-0db5-7a52-bee2f1d71518"
+2020/01/25 02:53:15 [DEBUG] checking for provider in "."
+2020/01/25 02:53:15 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:53:15 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:53:15 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:15 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:53:15 [DEBUG] checking for provisioner in "."
+2020/01/25 02:53:15 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:53:15 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:15 [INFO] backend/local: starting Apply operation
+2020-01-25T02:53:15.235-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:15.257-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:15.259-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21050
+2020-01-25T02:53:15.259-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:15.490-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:15.490-0500
+2020-01-25T02:53:15.513-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:15.513-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin909499089 network=unix timestamp=2020-01-25T02:53:15.513-0500
+2020-01-25T02:53:15.564-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21050
+2020-01-25T02:53:15.564-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:15 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:53:15 [DEBUG] Starting graph walk: walkValidate
+2020-01-25T02:53:15.566-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:15.593-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:15.596-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21051
+2020-01-25T02:53:15.596-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:15.610-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:15.610-0500
+2020-01-25T02:53:15.637-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:15.637-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin160150894 network=unix timestamp=2020-01-25T02:53:15.637-0500
+2020-01-25T02:53:15.690-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21051
+2020-01-25T02:53:15.690-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:15 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:53:15 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:53:15 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:53:15 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:53:15 [INFO] backend/local: apply calling Plan
+2020/01/25 02:53:15 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:53:15 [DEBUG] Starting graph walk: walkPlan
+2020-01-25T02:53:15.692-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:15.714-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:15.716-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21052
+2020-01-25T02:53:15.716-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:15.730-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:15.729-0500
+2020-01-25T02:53:15.753-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:15.753-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin582289179 network=unix timestamp=2020-01-25T02:53:15.753-0500
+2020/01/25 02:53:16 [DEBUG] Resource instance state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:16 [DEBUG] Resource instance state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020-01-25T02:53:16.499-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21052
+2020-01-25T02:53:16.499-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:16 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/01/25 02:53:17 [INFO] backend/local: apply calling Apply
+2020/01/25 02:53:17 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:53:17 [DEBUG] Resource state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:53:17 [DEBUG] Resource state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:53:17 [DEBUG] Starting graph walk: walkApply
+2020-01-25T02:53:17.459-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:17.488-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:17.491-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21053
+2020-01-25T02:53:17.491-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:17.506-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:17.506-0500
+2020-01-25T02:53:17.535-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:17.535-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin985840560 network=unix timestamp=2020-01-25T02:53:17.535-0500
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Create change
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Create change
+2020-01-25T02:53:18.333-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:53:18 GS DEBUG === 1
+panic: runtime error: index out of range [0] with length 0
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: goroutine 149 [running]:
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: main.resourceNetworkObjectGroupCreate(0xc000114d90, 0x1bdd3e0, 0xc000502200, 0x2, 0x255c5c0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/resource_networkobjectgroup.go:80 +0x6e9
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc000128b00, 0xc0000dcdc0, 0xc0005d3ca0, 0x1bdd3e0, 0xc000502200, 0xc000373801, 0xc0001d8060, 0xc000373918)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/helper/schema/resource.go:305 +0x365
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc000128b80, 0xc000015918, 0xc0000dcdc0, 0xc0005d3ca0, 0xc0001d42c8, 0xc000010298, 0x1a817a0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/helper/schema/provider.go:294 +0x99
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc0000cc9e8, 0x1e371a0, 0xc000487320, 0xc0005b2720, 0xc0000cc9e8, 0xc000487320, 0xc00007da80)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/internal/helper/plugin/grpc_provider.go:885 +0x882
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1baef80, 0xc0000cc9e8, 0x1e371a0, 0xc000487320, 0xc0005b26c0, 0x0, 0x1e371a0, 0xc000487320, 0xc0002ba5a0, 0x120)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/internal/tfplugin5/tfplugin5.pb.go:3189 +0x217
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).processUnaryRPC(0xc0000fa000, 0x1e42a80, 0xc00058a600, 0xc00014c300, 0xc00013cd50, 0x2530a60, 0x0, 0x0, 0x0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:995 +0x460
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).handleStream(0xc0000fa000, 0x1e42a80, 0xc00058a600, 0xc00014c300, 0x0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:1275 +0xd97
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc0001681f0, 0xc0000fa000, 0x1e42a80, 0xc00058a600, 0xc00014c300)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:710 +0xbb
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:708 +0xa1
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobject.myobject: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobjectgroup.mygroup: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020-01-25T02:53:18.429-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21053 error="exit status 2"
+2020-01-25T02:53:18.445-0500 [DEBUG] plugin: plugin exited

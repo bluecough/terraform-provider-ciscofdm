@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/bluecough/go-ftd"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	"log"
 )
 
 func resourceNetworkObjectGroup() *schema.Resource {
@@ -26,13 +27,13 @@ func resourceNetworkObjectGroup() *schema.Resource {
 					Schema: map[string]*schema.Schema{
 						"id": &schema.Schema{
 							Type:     schema.TypeString,
-							Required: true,
+							Computed: true,
 						},
 						"type": &schema.Schema{
 							Type:     schema.TypeString,
-							Required: true,
+							Optional: true,
 						},
-						"name": &schema.Schema{
+						"netname": &schema.Schema{
 							Type:     schema.TypeString,
 							Required: true,
 						},
@@ -43,22 +44,45 @@ func resourceNetworkObjectGroup() *schema.Resource {
 					},
 				},
 			},
-
+			"type": &schema.Schema{
+				Type:     schema.TypeString,
+				Required: true,
+			},
 		},
 	}
 }
 
 func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
+    total := d.Get("objects.#")
+    log.Println("GS DEBUG ===",total)
 
-	n := new(goftd.NetworkObjectGroup)
-	n.Name = d.Get("name").(string)
-	n.Objects = d.Get("objects").([]*goftd.ReferenceObject)
+    n := new(goftd.NetworkObjectGroup)
+    n.Name = d.Get("name").(string)
 
-	err := cf.CreateNetworkObjectGroup(n,goftd.DuplicateActionReplace )
-	if err != nil{
-		fmt.Errorf("error: %s\n", err)
+
+    entries := d.Get("objects").(*schema.Set)
+
+    var batchEntries = []*goftd.ReferenceObject{}
+	n.Objects = batchEntries
+
+    for _, vRaw := range entries.List() {
+    	val := vRaw.(map[string]interface{})
+
+    	batchEntries = append(batchEntries, &goftd.ReferenceObject{
+			ID:      val["id"].(string),
+			Version: val["version"].(string),
+			Name:    val["netname"].(string),
+			Type:    val["type"].(string),
+		})
 	}
+	err := cf.CreateNetworkObjectGroup(n, goftd.DuplicateActionReplace)
+   // log.Println(&n.Objects[0].Name)
+	d.SetId(n.Name)
+	if err != nil{
+		fmt.Errorf(err.Error())
+	}
+
 	return resourceNetworkObjectGroupRead(d, m)
 }
 

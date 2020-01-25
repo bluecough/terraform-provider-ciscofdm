@@ -1,0 +1,1111 @@
+2020/01/25 02:53:15 [INFO] Terraform version: 0.12.19  
+2020/01/25 02:53:15 [INFO] Go runtime version: go1.13.5
+2020/01/25 02:53:15 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/01/25 02:53:15 [DEBUG] Attempting to open CLI config file: /Users/gseeto/.terraformrc
+2020/01/25 02:53:15 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/01/25 02:53:15 [INFO] CLI command args: []string{"apply"}
+2020/01/25 02:53:15 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/01/25 02:53:15 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/01/25 02:53:15 [DEBUG] New state was assigned lineage "513380eb-57a2-0db5-7a52-bee2f1d71518"
+2020/01/25 02:53:15 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/01/25 02:53:15 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/01/25 02:53:15 [DEBUG] checking for provider in "."
+2020/01/25 02:53:15 [WARN] found legacy provider "terraform-provider-ciscofdm"
+2020/01/25 02:53:15 [DEBUG] checking for provider in "/usr/local/bin"
+2020/01/25 02:53:15 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:15 [DEBUG] found valid plugin: "ciscofdm", "0.0.0", "/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm"
+2020/01/25 02:53:15 [DEBUG] checking for provisioner in "."
+2020/01/25 02:53:15 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/01/25 02:53:15 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/01/25 02:53:15 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/01/25 02:53:15 [INFO] backend/local: starting Apply operation
+2020/01/25 02:53:15 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/01/25 02:53:15 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/01/25 02:53:15 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/01/25 02:53:15 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/01/25 02:53:15 [TRACE] statemgr.Filesystem: existing snapshot has lineage "dfff7a30-b6ac-f6c1-f55f-04e28597132a" serial 45
+2020/01/25 02:53:15 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/01/25 02:53:15 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/01/25 02:53:15 [TRACE] backend/local: reading remote state for workspace "default"
+2020/01/25 02:53:15 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/01/25 02:53:15 [TRACE] statemgr.Filesystem: read snapshot with lineage "dfff7a30-b6ac-f6c1-f55f-04e28597132a" serial 45
+2020/01/25 02:53:15 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/01/25 02:53:15 [TRACE] backend/local: building context for current working directory
+2020/01/25 02:53:15 [TRACE] terraform.NewContext: starting
+2020/01/25 02:53:15 [TRACE] terraform.NewContext: resolving provider version selections
+2020/01/25 02:53:15 [TRACE] terraform.NewContext: loading provider schemas
+2020/01/25 02:53:15 [TRACE] LoadSchemas: retrieving schema for provider type "ciscofdm"
+2020-01-25T02:53:15.235-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:15.257-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:15.259-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21050
+2020-01-25T02:53:15.259-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:15.490-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:15.490-0500
+2020-01-25T02:53:15.513-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:15.513-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin909499089 network=unix timestamp=2020-01-25T02:53:15.513-0500
+2020/01/25 02:53:15 [TRACE] GRPCProvider: GetSchema
+2020/01/25 02:53:15 [TRACE] GRPCProvider: Close
+2020-01-25T02:53:15.564-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21050
+2020-01-25T02:53:15.564-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:15 [TRACE] terraform.NewContext: complete
+2020/01/25 02:53:15 [TRACE] backend/local: finished building terraform.Context
+2020/01/25 02:53:15 [TRACE] backend/local: requesting interactive input, if necessary
+2020/01/25 02:53:15 [TRACE] Context.Input: Prompting for provider arguments
+2020/01/25 02:53:15 [TRACE] Context.Input: Provider provider.ciscofdm declared at main.tf:1,1-20
+2020/01/25 02:53:15 [TRACE] Context.Input: Input for provider.ciscofdm: map[string]cty.Value{}
+2020/01/25 02:53:15 [TRACE] backend/local: running validation operation
+2020/01/25 02:53:15 [INFO] terraform: building graph: GraphTypeValidate
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/01/25 02:53:15 [TRACE] ConfigTransformer: Starting for path: 
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/01/25 02:53:15 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/01/25 02:53:15 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) config from main.tf:12,1-45
+2020/01/25 02:53:15 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) config from main.tf:18,1-49
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/01/25 02:53:15 [TRACE] ProviderConfigTransformer: attaching to "provider.ciscofdm" provider configuration from main.tf:1,1-20
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: ciscofdm_networkobject.myobject is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: ciscofdm_networkobjectgroup.mygroup is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobject.myobject
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeValidatableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/01/25 02:53:15 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobject.myobject
+2020/01/25 02:53:15 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodeValidatableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeValidatableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/01/25 02:53:15 [DEBUG] Starting graph walk: walkValidate
+2020/01/25 02:53:15 [TRACE] dag/walk: updating graph
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "provider.ciscofdm (close)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "root"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "root" waiting on "provider.ciscofdm (close)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "ciscofdm_networkobjectgroup.mygroup" waiting on "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "provider.ciscofdm (close)" waiting on "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "provider.ciscofdm (close)" waiting on "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "ciscofdm_networkobject.myobject" waiting on "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "provider.ciscofdm (close)", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobject.myobject", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobjectgroup.mygroup", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm": starting visit (*terraform.NodeApplyableProvider)
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm": evaluating
+2020/01/25 02:53:15 [TRACE] [walkValidate] Entering eval tree: provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-01-25T02:53:15.566-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:15.593-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:15.596-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21051
+2020-01-25T02:53:15.596-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:15.610-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:15.610-0500
+2020-01-25T02:53:15.637-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:15.637-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin160150894 network=unix timestamp=2020-01-25T02:53:15.637-0500
+2020/01/25 02:53:15 [TRACE] BuiltinEvalContext: Initialized "ciscofdm" provider for provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/01/25 02:53:15 [TRACE] buildProviderConfig for provider.ciscofdm: using explicit config only
+2020/01/25 02:53:15 [TRACE] GRPCProvider: GetSchema
+2020/01/25 02:53:15 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/01/25 02:53:15 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:15 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:15 [TRACE] [walkValidate] Exiting eval tree: provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm": visit complete
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] vertex "ciscofdm_networkobject.myobject": starting visit (*terraform.NodeValidatableResource)
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] vertex "ciscofdm_networkobject.myobject": evaluating
+2020/01/25 02:53:15 [TRACE] [walkValidate] Entering eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:15 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": starting visit (*terraform.NodeValidatableResource)
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:15 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": evaluating
+2020/01/25 02:53:15 [TRACE] [walkValidate] Entering eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/01/25 02:53:15 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/01/25 02:53:15 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/01/25 02:53:15 [TRACE] [walkValidate] Exiting eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:15 [TRACE] vertex "ciscofdm_networkobject.myobject": visit complete
+2020/01/25 02:53:15 [TRACE] [walkValidate] Exiting eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:15 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": visit complete
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "provider.ciscofdm (close)"
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm (close)": evaluating
+2020/01/25 02:53:15 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/01/25 02:53:15 [TRACE] [walkValidate] Entering eval tree: provider.ciscofdm (close)
+2020/01/25 02:53:15 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/01/25 02:53:15 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/01/25 02:53:15 [TRACE] GRPCProvider: Close
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/01/25 02:53:15 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/01/25 02:53:15 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-01-25T02:53:15.690-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21051
+2020-01-25T02:53:15.690-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:15 [TRACE] [walkValidate] Exiting eval tree: provider.ciscofdm (close)
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm (close)": visit complete
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "root"
+2020/01/25 02:53:15 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/01/25 02:53:15 [TRACE] vertex "root": visit complete
+2020/01/25 02:53:15 [INFO] backend/local: apply calling Refresh
+2020/01/25 02:53:15 [INFO] terraform: building graph: GraphTypeRefresh
+2020/01/25 02:53:15 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/01/25 02:53:15 [TRACE] ConfigTransformer: Starting for path: 
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/01/25 02:53:15 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/01/25 02:53:15 [TRACE] ProviderConfigTransformer: attaching to "provider.ciscofdm" provider configuration from main.tf:1,1-20
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/01/25 02:53:15 [DEBUG] pruning unused provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  ------
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  root - terraform.graphNodeRoot
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/01/25 02:53:15 [DEBUG] Starting graph walk: walkRefresh
+2020/01/25 02:53:15 [TRACE] dag/walk: updating graph
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "root"
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "root"
+2020/01/25 02:53:15 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/01/25 02:53:15 [TRACE] vertex "root": visit complete
+2020/01/25 02:53:15 [INFO] backend/local: apply calling Plan
+2020/01/25 02:53:15 [INFO] terraform: building graph: GraphTypePlan
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/01/25 02:53:15 [TRACE] ConfigTransformer: Starting for path: 
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/01/25 02:53:15 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/01/25 02:53:15 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) config from main.tf:12,1-45
+2020/01/25 02:53:15 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) config from main.tf:18,1-49
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/01/25 02:53:15 [TRACE] ProviderConfigTransformer: attaching to "provider.ciscofdm" provider configuration from main.tf:1,1-20
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: ciscofdm_networkobject.myobject is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: ciscofdm_networkobjectgroup.mygroup is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobject.myobject
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:15 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) needs provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/01/25 02:53:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/01/25 02:53:15 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobject.myobject
+2020/01/25 02:53:15 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:15 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:15 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/01/25 02:53:15 [TRACE] ForcedCBDTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/01/25 02:53:15 [TRACE] ForcedCBDTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/01/25 02:53:15 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/01/25 02:53:15 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodePlannableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/01/25 02:53:15 [DEBUG] Starting graph walk: walkPlan
+2020/01/25 02:53:15 [TRACE] dag/walk: updating graph
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "provider.ciscofdm (close)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added new vertex: "root"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "provider.ciscofdm (close)" waiting on "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "root" waiting on "provider.ciscofdm (close)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "ciscofdm_networkobject.myobject" waiting on "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "provider.ciscofdm (close)" waiting on "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "ciscofdm_networkobjectgroup.mygroup" waiting on "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "provider.ciscofdm (close)", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobject.myobject", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobjectgroup.mygroup", sending new deps
+2020/01/25 02:53:15 [TRACE] dag/walk: visiting "provider.ciscofdm"
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm": starting visit (*terraform.NodeApplyableProvider)
+2020/01/25 02:53:15 [TRACE] vertex "provider.ciscofdm": evaluating
+2020/01/25 02:53:15 [TRACE] [walkPlan] Entering eval tree: provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-01-25T02:53:15.692-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:15.714-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:15.716-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21052
+2020-01-25T02:53:15.716-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:15.730-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:15.729-0500
+2020-01-25T02:53:15.753-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:15.753-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin582289179 network=unix timestamp=2020-01-25T02:53:15.753-0500
+2020/01/25 02:53:15 [TRACE] BuiltinEvalContext: Initialized "ciscofdm" provider for provider.ciscofdm
+2020/01/25 02:53:15 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:15 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:15 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/01/25 02:53:15 [TRACE] buildProviderConfig for provider.ciscofdm: using explicit config only
+2020/01/25 02:53:15 [TRACE] GRPCProvider: GetSchema
+2020/01/25 02:53:15 [TRACE] GRPCProvider: Configure
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: provider.ciscofdm
+2020/01/25 02:53:16 [TRACE] vertex "provider.ciscofdm": visit complete
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": starting visit (*terraform.NodePlannableResource)
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": evaluating
+2020/01/25 02:53:16 [TRACE] [walkPlan] Entering eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": starting visit (*terraform.NodePlannableResource)
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": expanding dynamic subgraph
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": evaluating
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/01/25 02:53:16 [TRACE] [walkPlan] Entering eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodePlannableResourceInstance
+  ------
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/01/25 02:53:16 [DEBUG] Resource instance state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/01/25 02:53:16 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": entering dynamic subgraph
+2020/01/25 02:53:16 [TRACE] dag/walk: updating graph
+2020/01/25 02:53:16 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": starting visit (*terraform.NodePlannableResourceInstance)
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": evaluating
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": expanding dynamic subgraph
+2020/01/25 02:53:16 [TRACE] [walkPlan] Entering eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/01/25 02:53:16 [TRACE] EvalReadState: reading state for ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodePlannableResourceInstance
+  ------
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/01/25 02:53:16 [DEBUG] Resource instance state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/01/25 02:53:16 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/01/25 02:53:16 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": entering dynamic subgraph
+2020/01/25 02:53:16 [TRACE] dag/walk: updating graph
+2020/01/25 02:53:16 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:16 [TRACE] EvalReadState: no state present for ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": starting visit (*terraform.NodePlannableResourceInstance)
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": evaluating
+2020/01/25 02:53:16 [TRACE] [walkPlan] Entering eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/01/25 02:53:16 [TRACE] EvalReadState: reading state for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] EvalReadState: no state present for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/01/25 02:53:16 [TRACE] Re-validating config for "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:16 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/01/25 02:53:16 [TRACE] Re-validating config for "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:16 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/01/25 02:53:16 [TRACE] GRPCProvider: PlanResourceChange
+2020/01/25 02:53:16 [TRACE] GRPCProvider: PlanResourceChange
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/01/25 02:53:16 [TRACE] EvalWriteState: writing current state object for ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/01/25 02:53:16 [TRACE] EvalWriteState: writing current state object for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] EvalWriteDiff: recorded Create change for ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": visit complete
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": dynamic subgraph completed successfully
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobject.myobject": visit complete
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/01/25 02:53:16 [TRACE] EvalWriteDiff: recorded Create change for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": visit complete
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": dynamic subgraph completed successfully
+2020/01/25 02:53:16 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": visit complete
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "provider.ciscofdm (close)"
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:16 [TRACE] vertex "provider.ciscofdm (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/01/25 02:53:16 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/01/25 02:53:16 [TRACE] vertex "provider.ciscofdm (close)": evaluating
+2020/01/25 02:53:16 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/01/25 02:53:16 [TRACE] [walkPlan] Entering eval tree: provider.ciscofdm (close)
+2020/01/25 02:53:16 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/01/25 02:53:16 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/01/25 02:53:16 [TRACE] GRPCProvider: Close
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/01/25 02:53:16 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-01-25T02:53:16.499-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21052
+2020-01-25T02:53:16.499-0500 [DEBUG] plugin: plugin exited
+2020/01/25 02:53:16 [TRACE] [walkPlan] Exiting eval tree: provider.ciscofdm (close)
+2020/01/25 02:53:16 [TRACE] vertex "provider.ciscofdm (close)": visit complete
+2020/01/25 02:53:16 [TRACE] dag/walk: visiting "root"
+2020/01/25 02:53:16 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/01/25 02:53:16 [TRACE] vertex "root": visit complete
+2020/01/25 02:53:16 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/01/25 02:53:17 [INFO] backend/local: apply calling Apply
+2020/01/25 02:53:17 [INFO] terraform: building graph: GraphTypeApply
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/01/25 02:53:17 [TRACE] ConfigTransformer: Starting for path: 
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.DiffTransformer
+2020/01/25 02:53:17 [TRACE] DiffTransformer starting
+2020/01/25 02:53:17 [TRACE] DiffTransformer: found Create change for ciscofdm_networkobject.myobject 
+2020/01/25 02:53:17 [TRACE] DiffTransformer: ciscofdm_networkobject.myobject will be represented by ciscofdm_networkobject.myobject
+2020/01/25 02:53:17 [TRACE] DiffTransformer: found Create change for ciscofdm_networkobjectgroup.mygroup 
+2020/01/25 02:53:17 [TRACE] DiffTransformer: ciscofdm_networkobjectgroup.mygroup will be represented by ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:17 [TRACE] DiffTransformer complete
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/01/25 02:53:17 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:18,1-49
+2020/01/25 02:53:17 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:12,1-45
+2020/01/25 02:53:17 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) config from main.tf:12,1-45
+2020/01/25 02:53:17 [TRACE] AttachResourceConfigTransformer: attaching to "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) config from main.tf:18,1-49
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/01/25 02:53:17 [DEBUG] Resource state not found for node "ciscofdm_networkobject.myobject", instance ciscofdm_networkobject.myobject
+2020/01/25 02:53:17 [DEBUG] Resource state not found for node "ciscofdm_networkobjectgroup.mygroup", instance ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/01/25 02:53:17 [TRACE] ProviderConfigTransformer: attaching to "provider.ciscofdm" provider configuration from main.tf:1,1-20
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: ciscofdm_networkobjectgroup.mygroup (prepare state) is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: ciscofdm_networkobject.myobject (prepare state) is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: ciscofdm_networkobject.myobject is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: ciscofdm_networkobjectgroup.mygroup is provided by provider.ciscofdm or inherited equivalent
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobject.myobject
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobject.myobject" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup" (*terraform.NodeApplyableResourceInstance) needs provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] ProviderTransformer: exact match for provider.ciscofdm serving ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:53:17 [DEBUG] ProviderTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" (*terraform.NodeApplyableResource) needs provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/01/25 02:53:17 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/01/25 02:53:17 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:53:17 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:53:17 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobject.myobject
+2020/01/25 02:53:17 [TRACE] AttachSchemaTransformer: attaching resource schema to ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:17 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "provider.ciscofdm" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobjectgroup.mygroup (prepare state)" references: []
+2020/01/25 02:53:17 [DEBUG] ReferenceTransformer: "ciscofdm_networkobject.myobject (prepare state)" references: []
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/01/25 02:53:17 [TRACE] AttachDependenciesTransformer: ciscofdm_networkobject.myobject depends on []
+2020/01/25 02:53:17 [TRACE] AttachDependenciesTransformer: ciscofdm_networkobjectgroup.mygroup depends on []
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.PruneUnusedValuesTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.PruneUnusedValuesTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ------
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/01/25 02:53:17 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/01/25 02:53:17 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobject.myobject (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+  ciscofdm_networkobjectgroup.mygroup (prepare state) - *terraform.NodeApplyableResource
+    provider.ciscofdm - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+  provider.ciscofdm - *terraform.NodeApplyableProvider
+  provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+    ciscofdm_networkobject.myobject - *terraform.NodeApplyableResourceInstance
+    ciscofdm_networkobjectgroup.mygroup - *terraform.NodeApplyableResourceInstance
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ciscofdm (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/01/25 02:53:17 [DEBUG] Starting graph walk: walkApply
+2020/01/25 02:53:17 [TRACE] dag/walk: updating graph
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "provider.ciscofdm"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "provider.ciscofdm (close)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "root"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobjectgroup.mygroup (prepare state)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobject.myobject (prepare state)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:17 [TRACE] dag/walk: added new vertex: "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "ciscofdm_networkobjectgroup.mygroup" waiting on "ciscofdm_networkobjectgroup.mygroup (prepare state)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "ciscofdm_networkobject.myobject" waiting on "ciscofdm_networkobject.myobject (prepare state)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "ciscofdm_networkobject.myobject (prepare state)" waiting on "provider.ciscofdm"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "root" waiting on "provider.ciscofdm (close)"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "ciscofdm_networkobjectgroup.mygroup (prepare state)" waiting on "provider.ciscofdm"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "provider.ciscofdm (close)" waiting on "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "provider.ciscofdm (close)" waiting on "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:17 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobjectgroup.mygroup (prepare state)", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "provider.ciscofdm (close)", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobjectgroup.mygroup", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobject.myobject", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: dependencies changed for "ciscofdm_networkobject.myobject (prepare state)", sending new deps
+2020/01/25 02:53:17 [TRACE] dag/walk: visiting "provider.ciscofdm"
+2020/01/25 02:53:17 [TRACE] vertex "provider.ciscofdm": starting visit (*terraform.NodeApplyableProvider)
+2020/01/25 02:53:17 [TRACE] vertex "provider.ciscofdm": evaluating
+2020/01/25 02:53:17 [TRACE] [walkApply] Entering eval tree: provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-01-25T02:53:17.459-0500 [INFO]  plugin: configuring client automatic mTLS
+2020-01-25T02:53:17.488-0500 [DEBUG] plugin: starting plugin: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm args=[/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm]
+2020-01-25T02:53:17.491-0500 [DEBUG] plugin: plugin started: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21053
+2020-01-25T02:53:17.491-0500 [DEBUG] plugin: waiting for RPC address: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm
+2020-01-25T02:53:17.506-0500 [INFO]  plugin.terraform-provider-ciscofdm: configuring server automatic mTLS: timestamp=2020-01-25T02:53:17.506-0500
+2020-01-25T02:53:17.535-0500 [DEBUG] plugin: using plugin: version=5
+2020-01-25T02:53:17.535-0500 [DEBUG] plugin.terraform-provider-ciscofdm: plugin address: address=/var/folders/rl/1xfjzxy51wxctz398r8z5vdh0000gn/T/plugin985840560 network=unix timestamp=2020-01-25T02:53:17.535-0500
+2020/01/25 02:53:17 [TRACE] BuiltinEvalContext: Initialized "ciscofdm" provider for provider.ciscofdm
+2020/01/25 02:53:17 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:17 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:17 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/01/25 02:53:17 [TRACE] buildProviderConfig for provider.ciscofdm: using explicit config only
+2020/01/25 02:53:17 [TRACE] GRPCProvider: GetSchema
+2020/01/25 02:53:17 [TRACE] GRPCProvider: Configure
+2020/01/25 02:53:18 [TRACE] [walkApply] Exiting eval tree: provider.ciscofdm
+2020/01/25 02:53:18 [TRACE] vertex "provider.ciscofdm": visit complete
+2020/01/25 02:53:18 [TRACE] dag/walk: visiting "ciscofdm_networkobject.myobject (prepare state)"
+2020/01/25 02:53:18 [TRACE] dag/walk: visiting "ciscofdm_networkobjectgroup.mygroup (prepare state)"
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobject.myobject (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup (prepare state)": evaluating
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobject.myobject (prepare state)": evaluating
+2020/01/25 02:53:18 [TRACE] [walkApply] Entering eval tree: ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/01/25 02:53:18 [TRACE] [walkApply] Entering eval tree: ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:53:18 [TRACE] [walkApply] Exiting eval tree: ciscofdm_networkobject.myobject (prepare state)
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobject.myobject (prepare state)": visit complete
+2020/01/25 02:53:18 [TRACE] [walkApply] Exiting eval tree: ciscofdm_networkobjectgroup.mygroup (prepare state)
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup (prepare state)": visit complete
+2020/01/25 02:53:18 [TRACE] dag/walk: visiting "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobject.myobject": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/01/25 02:53:18 [TRACE] dag/walk: visiting "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobject.myobject": evaluating
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/01/25 02:53:18 [TRACE] [walkApply] Entering eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": evaluating
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:18 [TRACE] [walkApply] Entering eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/01/25 02:53:18 [TRACE] EvalReadDiff: Read Create change from plan for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/01/25 02:53:18 [TRACE] EvalReadState: reading state for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] EvalReadState: no state present for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/01/25 02:53:18 [TRACE] EvalReadDiff: Read Create change from plan for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/01/25 02:53:18 [TRACE] EvalReadDiff: Read Create change from plan for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/01/25 02:53:18 [TRACE] EvalReadState: reading state for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] EvalReadState: no state present for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/01/25 02:53:18 [TRACE] EvalReadDiff: Read Create change from plan for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/01/25 02:53:18 [TRACE] Re-validating config for "ciscofdm_networkobject.myobject"
+2020/01/25 02:53:18 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/01/25 02:53:18 [TRACE] Re-validating config for "ciscofdm_networkobjectgroup.mygroup"
+2020/01/25 02:53:18 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/01/25 02:53:18 [TRACE] GRPCProvider: PlanResourceChange
+2020/01/25 02:53:18 [TRACE] GRPCProvider: PlanResourceChange
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2020/01/25 02:53:18 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/01/25 02:53:18 [TRACE] EvalReadState: reading state for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] EvalReadState: no state present for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApply
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2020/01/25 02:53:18 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobject.myobject: applying the planned Create change
+2020/01/25 02:53:18 [TRACE] GRPCProvider: ApplyResourceChange
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/01/25 02:53:18 [TRACE] EvalReadState: reading state for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] EvalReadState: no state present for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApply
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobjectgroup.mygroup: applying the planned Create change
+2020/01/25 02:53:18 [TRACE] GRPCProvider: ApplyResourceChange
+2020-01-25T02:53:18.333-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 2020/01/25 02:53:18 GS DEBUG === 1
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: panic: runtime error: index out of range [0] with length 0
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: goroutine 149 [running]:
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: main.resourceNetworkObjectGroupCreate(0xc000114d90, 0x1bdd3e0, 0xc000502200, 0x2, 0x255c5c0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/resource_networkobjectgroup.go:80 +0x6e9
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc000128b00, 0xc0000dcdc0, 0xc0005d3ca0, 0x1bdd3e0, 0xc000502200, 0xc000373801, 0xc0001d8060, 0xc000373918)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/helper/schema/resource.go:305 +0x365
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc000128b80, 0xc000015918, 0xc0000dcdc0, 0xc0005d3ca0, 0xc0001d42c8, 0xc000010298, 0x1a817a0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/helper/schema/provider.go:294 +0x99
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc0000cc9e8, 0x1e371a0, 0xc000487320, 0xc0005b2720, 0xc0000cc9e8, 0xc000487320, 0xc00007da80)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/internal/helper/plugin/grpc_provider.go:885 +0x882
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1baef80, 0xc0000cc9e8, 0x1e371a0, 0xc000487320, 0xc0005b26c0, 0x0, 0x1e371a0, 0xc000487320, 0xc0002ba5a0, 0x120)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.5.0/internal/tfplugin5/tfplugin5.pb.go:3189 +0x217
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).processUnaryRPC(0xc0000fa000, 0x1e42a80, 0xc00058a600, 0xc00014c300, 0xc00013cd50, 0x2530a60, 0x0, 0x0, 0x0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:995 +0x460
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).handleStream(0xc0000fa000, 0x1e42a80, 0xc00058a600, 0xc00014c300, 0x0)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:1275 +0xd97
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc0001681f0, 0xc0000fa000, 0x1e42a80, 0xc00058a600, 0xc00014c300)
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:710 +0xbb
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-01-25T02:53:18.427-0500 [DEBUG] plugin.terraform-provider-ciscofdm: 	/Users/gseeto/Documents/Development/GoLang/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:708 +0xa1
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobject.myobject: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [DEBUG] ciscofdm_networkobjectgroup.mygroup: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/01/25 02:53:18 [TRACE] EvalMaybeTainted: ciscofdm_networkobject.myobject encountered an error during creation, so it is now marked as tainted
+2020/01/25 02:53:18 [TRACE] EvalMaybeTainted: ciscofdm_networkobjectgroup.mygroup encountered an error during creation, so it is now marked as tainted
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/01/25 02:53:18 [TRACE] EvalWriteState: removing state object for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] EvalWriteState: removing state object for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2020/01/25 02:53:18 [TRACE] EvalApplyProvisioners: ciscofdm_networkobjectgroup.mygroup has no state, so skipping provisioners
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/01/25 02:53:18 [TRACE] EvalApplyProvisioners: ciscofdm_networkobject.myobject has no state, so skipping provisioners
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/01/25 02:53:18 [TRACE] EvalMaybeTainted: ciscofdm_networkobjectgroup.mygroup encountered an error during creation, so it is now marked as tainted
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/01/25 02:53:18 [TRACE] EvalMaybeTainted: ciscofdm_networkobject.myobject encountered an error during creation, so it is now marked as tainted
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/01/25 02:53:18 [TRACE] EvalWriteState: removing state object for ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] EvalWriteState: removing state object for ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalIf
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2020/01/25 02:53:18 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/01/25 02:53:18 [TRACE] [walkApply] Exiting eval tree: ciscofdm_networkobjectgroup.mygroup
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobjectgroup.mygroup": visit complete
+2020/01/25 02:53:18 [TRACE] [walkApply] Exiting eval tree: ciscofdm_networkobject.myobject
+2020/01/25 02:53:18 [TRACE] vertex "ciscofdm_networkobject.myobject": visit complete
+2020/01/25 02:53:18 [TRACE] dag/walk: upstream of "provider.ciscofdm (close)" errored, so skipping
+2020/01/25 02:53:18 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020-01-25T02:53:18.429-0500 [DEBUG] plugin: plugin process exited: path=/Users/gseeto/Documents/Development/GoLang/terraform-provider-ciscofdm/terraform-provider-ciscofdm pid=21053 error="exit status 2"
+2020/01/25 02:53:18 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/01/25 02:53:18 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2020/01/25 02:53:18 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2020/01/25 02:53:18 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2020/01/25 02:53:18 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/01/25 02:53:18 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-01-25T02:53:18.445-0500 [DEBUG] plugin: plugin exited
