@@ -21,5 +21,9 @@ resource "ciscofdm_networkobjectgroup" "mygroup" {
      netname = "any-ipv6"
      type = "networkobject"
   }
+  objects {
+     netname = "SomeOtherNet"
+     type = "networkobject"
+  }
   type = "networkobjectgroup"
 }
