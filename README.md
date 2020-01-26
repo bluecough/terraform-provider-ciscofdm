@@ -75,7 +75,7 @@ resource "ciscofdm_networkobject" "myobject" {
 
 ### `ciscofdm_networkobjectgroup`
 
-To place NetworkObjects into groups. Please note adding objects that are not already in the system into the group will make your terraform state become out of sync.
+To place NetworkObjects into groups. Please note adding objects that are not already in the system, into the group will make your terraform state become out of sync.
 
 #### Example
 
