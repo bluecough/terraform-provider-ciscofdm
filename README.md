@@ -104,7 +104,7 @@ resource "ciscofdm_networkobjectgroup" "myobjectgroup" {
 
 ### `ciscofdm_portobject`
 
-This creates portobjects for use in access rules. Note that if you create an access port in reverse that it will throw an error. ie/ 5000-4000 rather than 4000-5000
+This creates portobjects for use in access rules. Note that if you create an access port in reverse that it will throw an error. ie/ 5000-4000 rather than 4000-5000.
 
 #### Example
 ```
