@@ -81,6 +81,7 @@ func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) err
 	//d.SetId(n.Name)
 	if err != nil{
 		fmt.Errorf(err.Error())
+		return err
 	}
 
 	return resourceNetworkObjectGroupRead(d, m)
@@ -105,22 +106,13 @@ func resourceNetworkObjectGroupUpdate(d *schema.ResourceData, m interface{}) err
 
 	if err != nil{
 		log.Println("GS DEBUG ====> call for GetNetworkObjectGroupBy failed :", err)
+		return err
 	}
 
 	/*
 	This section is around displaying the return values of the GetNetworkObjectGroupBy function
 	*/
 
-	for i := range v {
-		for j := range v[i].Objects {
-			log.Println("===========>  ", v[i].Objects[j].Name)
-			log.Println("===========>  ", v[i].Objects[j].ID)
-			log.Println("===========>  ", v[i].Objects[j].Version)
-		}
-
-	}
-	// Get the length of v[0].Objects which should only be 1
-    //log.Println("------> ", len(v[0].Objects))
 	entries := d.Get("objects").(*schema.Set)
 	var batchEntries = []*goftd.ReferenceObject{}
 	for _, vRaw := range entries.List() {
@@ -133,12 +125,11 @@ func resourceNetworkObjectGroupUpdate(d *schema.ResourceData, m interface{}) err
 			Type:    val["type"].(string),
 		})
 	}
-	//log.Println("------> ", batchEntries[0].Name)
 	// Create localro as slice pointer and add more slices based upon the number of Objects we had
 	// Then assign values that we had from the read
 	localnog := new(goftd.NetworkObjectGroup)
 	localro := []*goftd.ReferenceObject{}
-//	for i := 0; i < len(v[0].Objects); i++ {
+
 	for i := 0; i < len(batchEntries); i++ {
 		localro = append(localro,new(goftd.ReferenceObject))
 		localro[i].Name = batchEntries[i].Name
@@ -152,10 +143,7 @@ func resourceNetworkObjectGroupUpdate(d *schema.ResourceData, m interface{}) err
 	localnog.ID = idsplit[0]
 	localnog.Type = v[0].Type
 	localnog.Version = v[0].Version
-	log.Println("------>", localnog.Name)
-	log.Println("------>", localnog.ID)
-	log.Println("------>", localnog.Type)
-	log.Println("------>", localnog.Version)
+
 	cf.UpdateNetworkObjectGroup(localnog)
 
 	if err != nil{
