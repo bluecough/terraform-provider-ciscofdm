@@ -118,6 +118,6 @@ resource "ciscofdm_portobject" "myportobject" {
 | ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
 | name        | Name of the Port Object you want to create.                               | Required |                |
 | layer4      | Layer4 option of either TCP or UDP                                        | Required | TCP or UDP     |
-| port        | This can either be a single port, a range of ports or comma delimited ports | Required | 1 or 1-2 or 1-2,5 | 
+| port        | This can either be a single port, a range of ports. And not comma delimited ports. | Required | 1 or 1-2 and NOT 1-2,5 | 
 
 
