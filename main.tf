@@ -27,13 +27,8 @@ resource "ciscofdm_networkobjectgroup" "mygroup" {
   }
   type = "networkobjectgroup"
 }
-resource "ciscofdm_portobject" "myportobject" {
-  name = "GSPORT 4444"
+resource "ciscofdm_portobject" "GSPORT_4444" {
+  name = "GSPORT 4444-5000"
   layer4 = "TCP"
-  port = "4444-4445"
-}
-resource "ciscofdm_portobject" "myportobject2" {
-  name = "GSPORT 5000"
-  layer4 = "TCP"
-  port = "5000"
+  port = "444i"
 }

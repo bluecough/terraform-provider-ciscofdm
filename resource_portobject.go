@@ -3,6 +3,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/bluecough/go-ftd"
 	"log"
+	"strings"
 )
 
 func resourcePortObject() *schema.Resource {
@@ -46,24 +47,58 @@ func resourcePortObjectCreate(d *schema.ResourceData, m interface{}) error {
 		return err
 	}
 
-	d.SetId(po.ID)
-	return resourceServerRead(d, m)
+	d.SetId(po.ID + " " + po.Version)
+	return resourcePortObjectRead(d, m)
 }
 
 func resourcePortObjectRead(d *schema.ResourceData, m interface{}) error {
+/*
+	cf := m.(*goftd.FTD)
+	if d.Get("layer4") == "TCP" {
+		_, err := cf.GetTCPPortObjectByID(d.Id())
+		if err != nil {
+			log.Println("Error: %s", err)
+			return err
+		}
+	}
+	_, err := cf.GetUDPPortObjectByID(d.Id())
+	if err != nil {
+		log.Println("Error: %s", err)
+		return err
+	}
+*/
 	return nil
 }
 
 func resourcePortObjectUpdate(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
+	idsplit := strings.Split(d.Id(), " ")
+    po := goftd.PortObject{}
+    po.ID = idsplit[0]
+    po.Version = idsplit[1]
+    po.Name = d.Get("name").(string)
+    //po.Type = d.Get("type").(string)
+    po.Port = d.Get("port").(string)
+    log.Println("-------->", resourcePortObject())
+	log.Println("-------->", po.Version)
+    if d.Get("type") == "UDP" {
+    	po.Type = "udpportobject"
+	}
+	po.Type = "tcpportobject"
 
-	return resourceServerRead(d, m)
+    cf.UpdatePortObject(&po)
+	d.SetId(po.ID + " " + po.Version)
+	return resourcePortObjectRead(d, m)
 }
 
 func resourcePortObjectDelete(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
+
+	idsplit := strings.Split(d.Id(), " ")
+
 	po := goftd.PortObject{}
-	po.ID = d.Id()
+	po.ID = idsplit[0]
+	po.Version = idsplit[1]
 	po.Type = d.Get("layer4").(string)
 	log.Println("===============> ", po.ID)
 	var err error
