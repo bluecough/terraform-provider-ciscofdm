@@ -37,6 +37,7 @@ func Provider() *schema.Provider {
 			"ciscofdm_dummy": resourceServer(),
 			"ciscofdm_networkobject" : resourceNetworkObject(),
 			"ciscofdm_networkobjectgroup" : resourceNetworkObjectGroup(),
+			"ciscofdm_portobject" : resourcePortObject(),
 		},
 		ConfigureFunc: providerConfigure,
 	}
