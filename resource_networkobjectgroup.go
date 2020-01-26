@@ -74,7 +74,6 @@ func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) err
 	}
 
 	n.Objects = batchEntries
-	//log.Println("GS DEBUG ====== NetworkObjectGroupCreate-B==== ",n.ID)
 	err := cf.CreateNetworkObjectGroup(n, goftd.DuplicateActionReplace)
     //log.Println("GS DEBUG ====== NetworkObjectGroupCreate-E==== ",n.ID)
 	d.SetId(n.ID + " " + n.Name)
@@ -91,7 +90,6 @@ func resourceNetworkObjectGroupRead(d *schema.ResourceData, m interface{}) error
 	cf := m.(*goftd.FTD)
 	filter := "name: " + d.Get("name").(string)
 	cf.GetNetworkObjectGroupBy(filter)
-    //log.Println("GS DEBUG === ", )
 	return nil
 }
 
