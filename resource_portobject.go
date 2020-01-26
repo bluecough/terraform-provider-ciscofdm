@@ -55,8 +55,8 @@ func resourcePortObjectRead(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourcePortObjectUpdate(d *schema.ResourceData, m interface{}) error {
-	address := d.Get("address").(string)
-	d.SetId(address)
+	cf := m.(*goftd.FTD)
+
 	return resourceServerRead(d, m)
 }
 
