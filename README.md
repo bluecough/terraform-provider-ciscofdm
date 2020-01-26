@@ -75,7 +75,7 @@ resource "ciscofdm_networkobject" "myobject" {
 
 ### `ciscofdm_networkobjectgroup`
 
-To place NetworkObjects into groups. Please note you can change the resource name after you apply but you can not rename the objects names.
+To place NetworkObjects into groups. Please note adding objects that are not already in the system into the group will make your terraform state become out of sync.
 
 #### Example
 
