@@ -10,7 +10,7 @@ provider "ciscofdm" {
 #}
 
 resource "ciscofdm_networkobject" "myobject" {
-  name = "GS-Terraform2"
+  name = "GS-Terraform"
   subtype = "HOST"
   value = "2.2.2.3"
 }
