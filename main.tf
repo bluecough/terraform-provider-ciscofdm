@@ -22,7 +22,7 @@ resource "ciscofdm_networkobjectgroup" "mygroup" {
      type = "networkobject"
   }
   objects {
-     netname = "SomeOtherNet"
+     netname = "any-ipv4"
      type = "networkobject"
   }
   type = "networkobjectgroup"

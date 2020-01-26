@@ -120,20 +120,31 @@ func resourceNetworkObjectGroupUpdate(d *schema.ResourceData, m interface{}) err
 
 	}
 	// Get the length of v[0].Objects which should only be 1
-    log.Println("------> ", len(v[0].Objects))
+    //log.Println("------> ", len(v[0].Objects))
+	entries := d.Get("objects").(*schema.Set)
+	var batchEntries = []*goftd.ReferenceObject{}
+	for _, vRaw := range entries.List() {
+		val := vRaw.(map[string]interface{})
 
+		batchEntries = append(batchEntries, &goftd.ReferenceObject{
+			ID:      val["id"].(string),
+			Version: val["version"].(string),
+			Name:    val["netname"].(string),
+			Type:    val["type"].(string),
+		})
+	}
+	//log.Println("------> ", batchEntries[0].Name)
 	// Create localro as slice pointer and add more slices based upon the number of Objects we had
 	// Then assign values that we had from the read
 	localnog := new(goftd.NetworkObjectGroup)
 	localro := []*goftd.ReferenceObject{}
-	for i := 0; i < len(v[0].Objects); i++ {
+//	for i := 0; i < len(v[0].Objects); i++ {
+	for i := 0; i < len(batchEntries); i++ {
 		localro = append(localro,new(goftd.ReferenceObject))
-		localro[i].Name = v[0].Objects[i].Name
-		localro[i].ID = v[0].Objects[i].ID
-		localro[i].Version = v[0].Objects[i].Version
-		localro[i].Type = v[0].Objects[i].Type
-
-		log.Println("+=+=+=+=> ", localro[i].Name)
+		localro[i].Name = batchEntries[i].Name
+		localro[i].ID = batchEntries[i].ID
+		localro[i].Version = batchEntries[i].Version
+		localro[i].Type = batchEntries[i].Type
 	}
 
 	localnog.Objects = localro
