@@ -102,5 +102,22 @@ resource "ciscofdm_networkobjectgroup" "myobjectgroup" {
 | type        | This is the type under the 'objects' key:value. It should always be 'networkobject' | Required | networkobject |
 | type        | This should always be networkobjectgroup                                        | Required | networkobjectgroup |
 
+### `ciscofdm_portobject`
+
+This creates portobjects for use in access rules. Note that if you create an access port in reverse that it will throw an error. ie/ 5000-4000 rather than 4000-5000
+
+#### Example
+```
+resource "ciscofdm_portobject" "myportobject" {
+  name = "My Application Port 4000-5000 Object"
+  layer4 = "TCP"
+  port = "4000-5000"
+}
+```
+| Property    | Description                                                               | Default  |  Valid Values  |
+| ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
+| name        | Name of the Port Object you want to create.                               | Required |                |
+| layer4      | Layer4 option of either TCP or UDP                                        | Required | TCP or UDP     |
+| port        | This can either be a single port, a range of ports. And not comma delimited ports. | Required | 1 or 1-2 and NOT 1-2,5 | 
 
 
