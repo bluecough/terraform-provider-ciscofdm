@@ -75,7 +75,7 @@ resource "ciscofdm_networkobject" "myobject" {
 
 ### `ciscofdm_networkobjectgroup`
 
-To place NetworkObjects into groups
+To place NetworkObjects into groups. Please note you can change the resource name after you apply but you can not rename the objects names.
 
 #### Example
 
