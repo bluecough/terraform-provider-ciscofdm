@@ -73,9 +73,9 @@ func resourceNetworkObjectGroupCreate(d *schema.ResourceData, m interface{}) err
 	}
 
 	n.Objects = batchEntries
-
+	log.Println("GS DEBUG ====== NetworkObjectGroupCreate-B==== ",n.ID)
 	err := cf.CreateNetworkObjectGroup(n, goftd.DuplicateActionReplace)
-    log.Println("GS DEBUG ====== NetworkObjectGroupCreate==== ",n.ID)
+    log.Println("GS DEBUG ====== NetworkObjectGroupCreate-E==== ",n.ID)
 	d.SetId(n.ID)
 
 	if err != nil{
