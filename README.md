@@ -97,11 +97,11 @@ resource "ciscofdm_networkobjectgroup" "myobjectgroup" {
 
 | Property    | Description                                                                     | Default |  Valid Values |
 | ----------- | ------------------------------------------------------------------------------- | ------- | --------- |
-| name        | Name of the NetworkObjectGroup you would like to create                         | Required|           |
-| objects     | Value that can be repeated so that your group can have one or more NetworkObjects. It can only be called 'object'. | Required | object |
-| netname     | Name of the NetworkObject you would like to add to the group                    | Required|   |
-| type        | This is the type under the 'objects' key:value. It should always be 'networkobject' | Required | networkobject |
-| type        | This should always be networkobjectgroup                                        | Required | networkobjectgroup |
+| `name`        | Name of the NetworkObjectGroup you would like to create                         | Required|           |
+| `objects`     | Value that can be repeated so that your group can have one or more NetworkObjects. It can only be called 'object'. | Required | object |
+| `netname`     | Name of the NetworkObject you would like to add to the group                    | Required|   |
+| `type`        | This is the type under the 'objects' key:value. It should always be 'networkobject' | Required | networkobject |
+| `type`        | This should always be networkobjectgroup                                        | Required | networkobjectgroup |
 
 ### `ciscofdm_portobject`
 
@@ -117,9 +117,9 @@ resource "ciscofdm_portobject" "myportobject" {
 ```
 | Property    | Description                                                               | Default  |  Valid Values  |
 | ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
-| name        | Name of the Port Object you want to create.                               | Required |                |
-| layer4      | Layer4 option of either TCP or UDP                                        | Required | TCP or UDP     |
-| port        | This can either be a single port, a range of ports. And not comma delimited ports. | Required | 1 or 1-2 and NOT 1-2,5 | 
+| `name`        | Name of the Port Object you want to create.                               | Required |                |
+| `layer4`      | Layer4 option of either TCP or UDP                                        | Required | TCP or UDP     |
+| `port`        | This can either be a single port, a range of ports. And not comma delimited ports. | Required | 1 or 1-2 and NOT 1-2,5 | 
 
 ### `ciscofdm_portobjectgroup`
 
@@ -144,9 +144,9 @@ resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
 
 | Property    | Description                                                               | Default  |  Valid Values  |
 | ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
-| name        | Name of the Port Object Group you want to create.                         | Required |                |
-| description | Description for the Port Object Group                                     | Optional |                |
-| type        | The tag is static but I kept it in the config.                            | Required | portobjectgroup| 
-| objects     | This is the TypeSet heirarchy                                             | Required |                |
-| name        | This is the name of any existing port object that you want to add         | Required |                |
-| type        | Only two options but no error check in place so anything else will error  | Required | tcpportobject or udpportobject | 
+| `name`        | Name of the Port Object Group you want to create.                         | Required |                |
+| `description` | Description for the Port Object Group                                     | Optional |                |
+| `type`        | The tag is static but I kept it in the config.                            | Required | portobjectgroup| 
+| `objects`     | This is the TypeSet heirarchy                                             | Required |                |
+| `name`        | This is the name of any existing port object that you want to add         | Required |                |
+| `type`        | Only two options but no error check in place so anything else will error  | Required | tcpportobject or udpportobject | 
