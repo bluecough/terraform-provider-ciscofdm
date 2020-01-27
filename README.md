@@ -126,6 +126,22 @@ resource "ciscofdm_portobject" "myportobject" {
 This is the Port Object group resource, that is similar to the network object group.
 
 #### Example
+```
+resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
+  name = "GSPORTGROUP"
+  description = "My Port Group"
+  type = "portobjectgroup"
+  objects {
+    name = "FTP"
+    type = "tcpportobject"
+  }
+  objects {
+    name = "GTP_PORTS-2123"
+    type = "tcpportobject"
+  }
+}
+```
+
 | Property    | Description                                                               | Default  |  Valid Values  |
 | ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
 | name        | Name of the Port Object Group you want to create.                         | Required |                |
