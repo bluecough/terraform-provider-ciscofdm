@@ -121,4 +121,8 @@ resource "ciscofdm_portobject" "myportobject" {
 | layer4      | Layer4 option of either TCP or UDP                                        | Required | TCP or UDP     |
 | port        | This can either be a single port, a range of ports. And not comma delimited ports. | Required | 1 or 1-2 and NOT 1-2,5 | 
 
+### `ciscofdm_portobjectgroup`
 
+This is the Port Object group resource, that is similar to the network object group.
+
+#### Example
