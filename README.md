@@ -126,3 +126,11 @@ resource "ciscofdm_portobject" "myportobject" {
 This is the Port Object group resource, that is similar to the network object group.
 
 #### Example
+| Property    | Description                                                               | Default  |  Valid Values  |
+| ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
+| name        | Name of the Port Object Group you want to create.                         | Required |                |
+| description | Description for the Port Object Group                                     | Optional |                |
+| type        | The tag is static but I kept it in the config.                            | Required | portobjectgroup| 
+| objects     | This is the TypeSet heirarchy                                             | Required |                |
+| name        | This is the name of any existing port object that you want to add         | Required |                |
+| type        | Only two options but no error check in place so anything else will error  | Required | tcpportobject or udpportobject | 
