@@ -121,4 +121,32 @@ resource "ciscofdm_portobject" "myportobject" {
 | layer4      | Layer4 option of either TCP or UDP                                        | Required | TCP or UDP     |
 | port        | This can either be a single port, a range of ports. And not comma delimited ports. | Required | 1 or 1-2 and NOT 1-2,5 | 
 
+### `ciscofdm_portobjectgroup`
 
+This is the Port Object group resource, that is similar to the network object group.
+
+#### Example
+```
+resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
+  name = "GSPORTGROUP"
+  description = "My Port Group"
+  type = "portobjectgroup"
+  objects {
+    name = "FTP"
+    type = "tcpportobject"
+  }
+  objects {
+    name = "GTP_PORTS-2123"
+    type = "tcpportobject"
+  }
+}
+```
+
+| Property    | Description                                                               | Default  |  Valid Values  |
+| ----------- | ------------------------------------------------------------------------- | -------  | -------------- |
+| name        | Name of the Port Object Group you want to create.                         | Required |                |
+| description | Description for the Port Object Group                                     | Optional |                |
+| type        | The tag is static but I kept it in the config.                            | Required | portobjectgroup| 
+| objects     | This is the TypeSet heirarchy                                             | Required |                |
+| name        | This is the name of any existing port object that you want to add         | Required |                |
+| type        | Only two options but no error check in place so anything else will error  | Required | tcpportobject or udpportobject | 
