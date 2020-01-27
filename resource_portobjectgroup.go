@@ -94,6 +94,57 @@ func resourcePortObjectGroupRead(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourcePortObjectGroupUpdate(d *schema.ResourceData, m interface{}) error {
+	cf := m.(*goftd.FTD)
+	pog := []*goftd.PortObjectGroup{}
+	idsplit := strings.Split(d.Id(), " ")
+	n := "name: " + idsplit[1]
+	log.Println("============> n := ", n)
+
+	pog,err := cf.GetPortObjectGroupBy(n)
+
+	log.Println( "===========> ", pog)
+	if err != nil{
+		log.Println("GS DEBUG ====> call for GetPortObjectGroupBy failed :", err)
+		return err
+	}
+	entries := d.Get("objects").(*schema.Set)
+	var batchEntries = []*goftd.ReferenceObject{}
+	for _, vRaw := range entries.List() {
+		val := vRaw.(map[string]interface{})
+
+		batchEntries = append(batchEntries, &goftd.ReferenceObject{
+			ID:      val["id"].(string),
+			Version: val["version"].(string),
+			Name:    val["name"].(string),
+			Type:    val["type"].(string),
+		})
+	}
+	// Create localro as slice pointer and add more slices based upon the number of Objects we had
+	// Then assign values that we had from the read
+	localnog := new(goftd.PortObjectGroup)
+	localro := []*goftd.ReferenceObject{}
+
+	for i := 0; i < len(batchEntries); i++ {
+		localro = append(localro,new(goftd.ReferenceObject))
+		localro[i].Name = batchEntries[i].Name
+		localro[i].ID = batchEntries[i].ID
+		localro[i].Version = batchEntries[i].Version
+		localro[i].Type = batchEntries[i].Type
+	}
+
+	localnog.Objects = localro
+	localnog.Name = d.Get("name").(string)
+	localnog.ID = idsplit[0]
+	localnog.Type = pog[0].Type
+	localnog.Version = pog[0].Version
+
+	cf.UpdatePortObjectGroup(localnog)
+
+	if err != nil{
+		log.Println("GS DEBUG =====NetworkObjectGRPtUpdate-E====== \n", err)
+	}
+	idsplit[1] = d.Get("name").(string)
+	d.SetId(idsplit[0] + " " + idsplit[1])
 
 	return resourceServerRead(d, m)
 }
@@ -105,7 +156,6 @@ func resourcePortObjectGroupDelete(d *schema.ResourceData, m interface{}) error 
 
 	n.ID = v[0]
 	err := cf.DeletePortObjectGroup(n)
-
 
 	if err != nil {
 		log.Println("Error: %s\n", err)

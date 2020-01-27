@@ -37,7 +37,11 @@ resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
   description = "My Port Group"
   type = "portobjectgroup"
   objects {
-    name = "AOL"
+    name = "FTP"
+    type = "tcpportobject"
+  }
+  objects {
+    name = "GTP_PORTS-2123"
     type = "tcpportobject"
   }
 }
