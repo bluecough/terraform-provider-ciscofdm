@@ -4,6 +4,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/bluecough/go-ftd"
 	"log"
+
 )
 
 func resourceAccessRule() *schema.Resource {
@@ -223,7 +224,7 @@ func resourceAccessRule() *schema.Resource {
 				},
 			},
 			"intrusionpolicy": &schema.Schema{
-				Type:     schema.TypeSet,
+				Type:     schema.TypeMap,
 				Optional: true,
 				Elem: &schema.Resource {
 					Schema: map[string]*schema.Schema{
@@ -247,7 +248,7 @@ func resourceAccessRule() *schema.Resource {
 				},
 			},
 			"filepolicy": &schema.Schema{
-				Type:     schema.TypeSet,
+				Type:     schema.TypeMap,
 				Optional: true,
 				Elem: &schema.Resource {
 					Schema: map[string]*schema.Schema{
@@ -275,7 +276,7 @@ func resourceAccessRule() *schema.Resource {
 				Optional: true,
 			},
 			"syslogserver": &schema.Schema{
-				Type:     schema.TypeSet,
+				Type:     schema.TypeMap,
 				Optional: true,
 				Elem: &schema.Resource {
 					Schema: map[string]*schema.Schema{
@@ -444,51 +445,59 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 
 
 //// WORK needs to be done
-/*
-	// Intrusion Policy
-	pintrusionpolicy := d.Get("intrusionpolicy").(*schema.Set)
-	var localIntrusionPolicyObject = new(goftd.ReferenceObject)
-	for _, vRaw := range pintrusionpolicy.List() {
-		val := vRaw.(map[string]interface{})
 
-		localIntrusionPolicyObject.ID = val["id"].(string)
-		localIntrusionPolicyObject.Version = val["version"].(string)
-		localIntrusionPolicyObject.Name = val["name"].(string)
-		localIntrusionPolicyObject.Type = val["type"].(string)
-	}
+	// Intrusion Policy
+	//pintrusionpolicy := d.Get("intrusionpolicy").(*)
+	//log.Println("==============> ", reflect.TypeOf(pintrusionpolicy))
+	var localIntrusionPolicyObject = new(goftd.ReferenceObject)
+
+	tf := d.Get("intrusionpolicy").(map[string]interface{})
+
+    log.Println("============+=====> ", tf["name"])
+	log.Println("============+=====> ", tf["name"].(string))
+
+    localIntrusionPolicyObject.Name = tf["name"].(string)
+    localIntrusionPolicyObject.Type = tf["type"].(string)
+	//log.Println("==============>>> ", tf)
 	pAR.IntrusionPolicy = localIntrusionPolicyObject
 
 	// File Policy
-	pfilepolicy := d.Get("filepolicy").(*schema.Set)
-	var localFilePolicyObject = new(goftd.ReferenceObject)
-	for _, vRaw := range pfilepolicy.List() {
-		val := vRaw.(map[string]interface{})
+	//var localFilePolicyObject = new(goftd.ReferenceObject)
+   	tg := d.Get("filepolicy").(map[string]interface{})
+   	log.Println("+=+=+=+=+=+=====> ", tg["name"])
 
-		localFilePolicyObject.ID = val["id"].(string)
-		localFilePolicyObject.Version = val["version"].(string)
-		localFilePolicyObject.Name = val["name"].(string)
-		localFilePolicyObject.Type = val["type"].(string)
+    if tg["name"] != nil {
+ 		var localFilePolicyObject = new(goftd.ReferenceObject)
+		log.Println("============+=====> ", tg["name"])
+		log.Println("============+=====> ", tg["name"].(string))
+
+		localFilePolicyObject.Name = tg["name"].(string)
+		localFilePolicyObject.Type = tg["type"].(string)
+		//log.Println("==============>>> ", tf)
+		pAR.FilePolicy = localFilePolicyObject
 	}
-	pAR.FilePolicy = localFilePolicyObject
+
 
 	// Log Files
 	pAR.LogFiles = d.Get("logfiles").(bool)
 
 	// Syslog Server
-	psyslogserver := d.Get("syslogserver").(*schema.Set)
-	var localSyslogServerObject = new(goftd.ReferenceObject)
-	for _, vRaw := range psyslogserver.List() {
-		val := vRaw.(map[string]interface{})
+	th := d.Get("syslogserver").(map[string]interface{})
+	log.Println("+=+=+=+=+=+=====> ", th["name"])
 
-		localSyslogServerObject.ID = val["id"].(string)
-		localSyslogServerObject.Version = val["version"].(string)
-		localSyslogServerObject.Name = val["name"].(string)
-		localSyslogServerObject.Type = val["type"].(string)
+	if th["name"] != nil {
+		var localSyslogServerObject = new(goftd.ReferenceObject)
+		log.Println("============+=====> ", th["name"])
+		log.Println("============+=====> ", th["name"].(string))
+
+		localSyslogServerObject.Name = th["name"].(string)
+		localSyslogServerObject.Type = th["type"].(string)
+		//log.Println("==============>>> ", tf)
+		pAR.SyslogServer = localSyslogServerObject
 	}
-	pAR.SyslogServer = localSyslogServerObject
-//// Works need to be done
-	// Parent
-*/
+
+
+
 
 	// Call CreateAccessRule
 	err := cf.CreateAccessRule(pAR, "default" )

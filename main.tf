@@ -48,4 +48,8 @@ provider "ciscofdm" {
 resource "ciscofdm_accessrule" "myaccessrules" {
   name = "GSTERRAFORMRULE001"
   ruleaction = "PERMIT"  
+  intrusionpolicy = {
+    name = "Connectivity Over Security"
+    type = "intrusionpolicy"
+  }
 }
