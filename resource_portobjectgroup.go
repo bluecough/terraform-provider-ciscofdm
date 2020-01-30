@@ -98,11 +98,9 @@ func resourcePortObjectGroupUpdate(d *schema.ResourceData, m interface{}) error 
 	pog := []*goftd.PortObjectGroup{}
 	idsplit := strings.Split(d.Id(), " ")
 	n := "name: " + idsplit[1]
-	log.Println("============> n := ", n)
 
 	pog,err := cf.GetPortObjectGroupBy(n)
 
-	log.Println( "===========> ", pog)
 	if err != nil{
 		log.Println("GS DEBUG ====> call for GetPortObjectGroupBy failed :", err)
 		return err

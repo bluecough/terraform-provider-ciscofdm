@@ -98,11 +98,10 @@ func resourceNetworkObjectGroupUpdate(d *schema.ResourceData, m interface{}) err
 	v := []*goftd.NetworkObjectGroup{}
 	idsplit := strings.Split(d.Id(), " ")
 	n := "name: " + idsplit[1]
-	log.Println("============> n := ", n)
 	v,err = cf.GetNetworkObjectGroupBy(n)
 
 	if err != nil{
-		log.Println("GS DEBUG ====> call for GetNetworkObjectGroupBy failed :", err)
+		log.Println("GS DEBUG ====> call for GetNetworkObjectGroupBy ", err)
 		return err
 	}
 

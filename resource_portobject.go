@@ -79,8 +79,6 @@ func resourcePortObjectUpdate(d *schema.ResourceData, m interface{}) error {
     po.Name = d.Get("name").(string)
     //po.Type = d.Get("type").(string)
     po.Port = d.Get("port").(string)
-    log.Println("-------->", resourcePortObject())
-	log.Println("-------->", po.Version)
     if d.Get("type") == "UDP" {
     	po.Type = "udpportobject"
 	}
@@ -100,7 +98,6 @@ func resourcePortObjectDelete(d *schema.ResourceData, m interface{}) error {
 	po.ID = idsplit[0]
 	po.Version = idsplit[1]
 	po.Type = d.Get("layer4").(string)
-	log.Println("===============> ", po.ID)
 	var err error
 
 	if po.Type == "UDP" {

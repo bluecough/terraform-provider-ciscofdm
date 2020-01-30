@@ -45,7 +45,7 @@ func resourceNetworkObjectCreate(d *schema.ResourceData, m interface{}) error {
 		fmt.Errorf("error: %s\n", err)
 	}
 
-	log.Println("GS DEBUG =====NetworkObjectCreate====== ", n.ID)
+
 	d.SetId(n.ID)
 	return resourceNetworkObjectRead(d, m)
 }
