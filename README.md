@@ -154,7 +154,7 @@ resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
 
 ### `ciscofdm_accessrule`
 
-This is the Access Rule resource. Applying this configuration you can implement access rules to your FDM. Please note there isn't any error check to see if objects you're calling are actually there. As an example lets say you enter an arbitrary Intrusion or File Policy into your rule. If it doesnt it exist it will error out.
+This is the Access Rule resource. Applying this configuration you can implement access rules to your FDM. Please note there isn't any error checking to see if objects you're calling are actually there(Although not hard to do, it's tedious right now). As an example lets say you enter an arbitrary Intrusion or File Policy into your rule. If it doesnt it exist it will error out.
 
 #### Example(s)
 ```
