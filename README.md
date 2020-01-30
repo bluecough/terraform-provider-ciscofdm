@@ -151,3 +151,10 @@ resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
 | `objects`     | This is the TypeSet heirarchy                                             | Required |                |
 | `name`        | This is the name of any existing port object that you want to add         | Required |                |
 | `type`        | Only two options but no error check in place so anything else will error  | Required | tcpportobject or udpportobject | 
+
+### `ciscofdm_accessrule`
+
+This is the Access Rule resource. Applying this configuration you can implement access rules to your FDM. Please note there isn't any error check to see if objects you're calling are actually there. As an example lets say you enter an arbitrary Intrusion or File Policy into your rule. If it doesnt it exist it will error out.
+
+#### Example(s)
+
