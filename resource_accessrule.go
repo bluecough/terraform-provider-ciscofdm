@@ -1,10 +1,9 @@
 package main
 
 import (
-	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/bluecough/go-ftd"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"log"
-
 )
 
 func resourceAccessRule() *schema.Resource {
@@ -301,7 +300,7 @@ func resourceAccessRule() *schema.Resource {
 			},
 			"parent": &schema.Schema{
 				Type:     schema.TypeInt,
-				Optional: true,
+				Computed: true,
 			},
 		},
 	}
@@ -496,8 +495,7 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 		pAR.SyslogServer = localSyslogServerObject
 	}
 
-
-
+	// Parent
 
 	// Call CreateAccessRule
 	err := cf.CreateAccessRule(pAR, "default" )
@@ -505,7 +503,7 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 		log.Println("==== > Error %s",err)
 		return err
 	}
-
+	log.Println("=========PARENT> ", d.Get("parent"))
 	d.SetId(pAR.ID)
 	return resourceServerRead(d, m)
 }
@@ -521,5 +519,20 @@ func resourceAccessRuleUpdate(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceAccessRuleDelete(d *schema.ResourceData, m interface{}) error {
+	cf := m.(*goftd.FTD)
+
+	pAP, err := cf.GetAccessPolicies( 10)
+	if err != nil{
+		log.Println("==== > Error %s",err)
+		return err
+	}
+	//log.Println("==========> ", reflect.TypeOf(pAP))
+	log.Println("=============> ",pAP[0].ID)
+
+	n := new(goftd.AccessRule)
+	n.ID = d.Id()
+	n.Parent = pAP[0].ID
+	cf.DeleteAccessRule(n)
+
 	return nil
 }
