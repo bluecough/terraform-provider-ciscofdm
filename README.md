@@ -157,4 +157,22 @@ resource "ciscofdm_portobjectgroup" "myportobjectgroup" {
 This is the Access Rule resource. Applying this configuration you can implement access rules to your FDM. Please note there isn't any error check to see if objects you're calling are actually there. As an example lets say you enter an arbitrary Intrusion or File Policy into your rule. If it doesnt it exist it will error out.
 
 #### Example(s)
+```
+resource "ciscofdm_accessrule" "myaccessrules" {
+  name = "GSTERRAFORMRULE001"
+  ruleaction = "PERMIT"  
+  intrusionpolicy = {
+    name = "Connectivity Over Security"
+    type = "intrusionpolicy"
+  }
+}
 
+```
+| Property      | Description                                                               | Default  |  Valid Values  |
+| ------------- | ------------------------------------------------------------------------- | -------  | -------------- |
+| `name`        | Name of the Rule you want                                                 | Required | string         |
+| `ruleid`      | RuleID so if you want to place rules before or another                    | Optional | int            |
+| `sourcezones` | This is a TypeSet so it is declared similarly like "objects" above        |          |                |
+| `name`        | Name of an existing zone. Required if sourcezones defined                 | Required | string         |
+| `destinationzones` | This is a TypeSet so it is declared similarly like "objects" above | | |
+| `name`        | Name of an existing zone. Required if destinationzones defined            | Required | string         |
