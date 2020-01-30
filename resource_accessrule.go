@@ -443,16 +443,18 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 
 
 	// Intrusion Policy
-
-	var localIntrusionPolicyObject = new(goftd.ReferenceObject)
-
 	tf := d.Get("intrusionpolicy").(map[string]interface{})
 
-    localIntrusionPolicyObject.Name = tf["name"].(string)
-    localIntrusionPolicyObject.Type = tf["type"].(string)
 
-	pAR.IntrusionPolicy = localIntrusionPolicyObject
+	if tf["name"] != nil {
+		var localIntrusionPolicyObject = new(goftd.ReferenceObject)
 
+		
+		localIntrusionPolicyObject.Name = tf["name"].(string)
+		localIntrusionPolicyObject.Type = tf["type"].(string)
+
+		pAR.IntrusionPolicy = localIntrusionPolicyObject
+	}
 	// File Policy
 	//var localFilePolicyObject = new(goftd.ReferenceObject)
    	tg := d.Get("filepolicy").(map[string]interface{})
