@@ -308,8 +308,7 @@ func resourceAccessRule() *schema.Resource {
 
 func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
-	//n := *goftd.AccessRule{}
-	//log.Println("==============> ", n)
+
 	// Define all the Structures and associated variables
 	pAR := new(goftd.AccessRule)
 
@@ -443,36 +442,29 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 	pAR.Users = localUsersObject
 
 
-//// WORK needs to be done
-
 	// Intrusion Policy
-	//pintrusionpolicy := d.Get("intrusionpolicy").(*)
-	//log.Println("==============> ", reflect.TypeOf(pintrusionpolicy))
+
 	var localIntrusionPolicyObject = new(goftd.ReferenceObject)
 
 	tf := d.Get("intrusionpolicy").(map[string]interface{})
 
-    log.Println("============+=====> ", tf["name"])
-	log.Println("============+=====> ", tf["name"].(string))
-
     localIntrusionPolicyObject.Name = tf["name"].(string)
     localIntrusionPolicyObject.Type = tf["type"].(string)
-	//log.Println("==============>>> ", tf)
+
 	pAR.IntrusionPolicy = localIntrusionPolicyObject
 
 	// File Policy
 	//var localFilePolicyObject = new(goftd.ReferenceObject)
    	tg := d.Get("filepolicy").(map[string]interface{})
-   	log.Println("+=+=+=+=+=+=====> ", tg["name"])
+
 
     if tg["name"] != nil {
  		var localFilePolicyObject = new(goftd.ReferenceObject)
-		log.Println("============+=====> ", tg["name"])
-		log.Println("============+=====> ", tg["name"].(string))
+
 
 		localFilePolicyObject.Name = tg["name"].(string)
 		localFilePolicyObject.Type = tg["type"].(string)
-		//log.Println("==============>>> ", tf)
+
 		pAR.FilePolicy = localFilePolicyObject
 	}
 
@@ -482,16 +474,15 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 
 	// Syslog Server
 	th := d.Get("syslogserver").(map[string]interface{})
-	log.Println("+=+=+=+=+=+=====> ", th["name"])
+
 
 	if th["name"] != nil {
 		var localSyslogServerObject = new(goftd.ReferenceObject)
-		log.Println("============+=====> ", th["name"])
-		log.Println("============+=====> ", th["name"].(string))
+
 
 		localSyslogServerObject.Name = th["name"].(string)
 		localSyslogServerObject.Type = th["type"].(string)
-		//log.Println("==============>>> ", tf)
+
 		pAR.SyslogServer = localSyslogServerObject
 	}
 
@@ -503,7 +494,7 @@ func resourceAccessRuleCreate(d *schema.ResourceData, m interface{}) error {
 		log.Println("==== > Error %s",err)
 		return err
 	}
-	log.Println("=========PARENT> ", d.Get("parent"))
+
 	d.SetId(pAR.ID)
 	return resourceServerRead(d, m)
 }
@@ -526,8 +517,6 @@ func resourceAccessRuleDelete(d *schema.ResourceData, m interface{}) error {
 		log.Println("==== > Error %s",err)
 		return err
 	}
-	//log.Println("==========> ", reflect.TypeOf(pAP))
-	log.Println("=============> ",pAP[0].ID)
 
 	n := new(goftd.AccessRule)
 	n.ID = d.Id()
