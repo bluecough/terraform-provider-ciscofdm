@@ -194,3 +194,4 @@ resource "ciscofdm_accessrule" "myaccessrules" {
 | `destinationzones` | This is a TypeSet so it is declared similarly like "objects" above | | |
 | `name`        | Name of an existing zone. Required if destinationzones defined            | Required | string         |
 | `sourcenetworks` | Refer to the network objects                                           |          | string         |
+| `destinationnetworks`  | Refer to the network objects                                     |          | string         |
