@@ -25,6 +25,22 @@ $ go mod init terraform-provider-ciscofdm
 $ go mod tidy
 $ go build
 ```
+## Update for Terraform 0.15
+On OSX
+```
+Create a directory and place the compiled plugin there
+$HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/darwin_amd64
+```
+Also create a .terraformrc in your home directory
+```
+providers {
+  customplugin = {
+   versions = ["1.0"]
+   source = "registry.terraform.io/hashicorp/ciscofdm"
+  }
+}
+```
+
 ## Provider Configuration
 
 ### Example
