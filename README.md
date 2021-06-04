@@ -21,7 +21,8 @@ Download and build the latest [release](https://github.com/bluecough/terraform-p
 
 Alternatively you can build it.
 ```
-$ go mod init terraform-provider-ciscofdm 
+$ go mod init terraform-provider-ciscofdm
+$ go mod tidy
 $ go build
 ```
 ## Provider Configuration
