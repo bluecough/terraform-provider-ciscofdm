@@ -26,7 +26,7 @@ $ go mod tidy
 $ go build
 ```
 ## Update for Terraform 0.15
-On OSX
+On OSX. This is needed in order to perform a `terraform init`.
 ```
 Create a directory and place the compiled plugin there
 $HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/darwin_amd64
@@ -193,3 +193,5 @@ resource "ciscofdm_accessrule" "myaccessrules" {
 | `name`        | Name of an existing zone. Required if sourcezones defined                 | Required | string         |
 | `destinationzones` | This is a TypeSet so it is declared similarly like "objects" above | | |
 | `name`        | Name of an existing zone. Required if destinationzones defined            | Required | string         |
+| `sourcenetworks` | Refer to the network objects                                           |          | string         |
+| `destinationnetworks`  | Refer to the network objects                                     |          | string         |
