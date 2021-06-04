@@ -9,3 +9,5 @@ crash.log
 terrun.sh
 terraform.log
 terraform-provider-ciscofdm
+fixprovider.sh
+

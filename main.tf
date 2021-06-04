@@ -1,7 +1,7 @@
 provider "ciscofdm" {
-  api_url = "192.168.128.30"
+  api_url = "192.168.128.1"
   username = "admin"
-  password = "Admin123"
+  password = "C1sco12345!"
   ssl_no_verify = true 
 }
 
@@ -45,9 +45,25 @@ provider "ciscofdm" {
 #    type = "tcpportobject"
 #  }
 #}
-resource "ciscofdm_accessrule" "myaccessrules" {
+resource "ciscofdm_accessrule" "myaccessrules01" {
   name = "GSTERRAFORMRULE001"
   ruleaction = "PERMIT"  
+  intrusionpolicy = {
+    name = "Connectivity Over Security"
+    type = "intrusionpolicy"
+  }
+}
+resource "ciscofdm_accessrule" "myaccessrules02" {
+  name = "GSTERRAFORMRULE002"
+  ruleaction = "PERMIT"
+  sourcenetworks {
+   name = "192.168.126.0"
+   type = "networkobject"
+  } 
+  destinationnetworks {
+   name = "any-ipv4"
+   type = "networkobject"
+  }
   intrusionpolicy = {
     name = "Connectivity Over Security"
     type = "intrusionpolicy"
