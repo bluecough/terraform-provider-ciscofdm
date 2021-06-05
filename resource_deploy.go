@@ -24,7 +24,7 @@ func resourceDeployObject() *schema.Resource {
 				Required: true,
 			},
 			"value": &schema.Schema{
-				Type:     schema.TypeBool,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 		},
@@ -36,14 +36,13 @@ func resourceDeployCreate(d *schema.ResourceData, m interface{}) error {
 
 	n := new(goftd.DeployObject)
 	n.Name = d.Get("name").(string)
-	n.SubType = d.Get("subtype").(string)
-	n.Value = d.Get("value").(string)
 
-	err := cf.PostDeploy(n, 1)
+	err := cf.PostDeploy(n)
 	if err != nil {
 		fmt.Errorf("error: %s\n", err)
 	}
-	return resourceDeployCreate(d, m)
+	d.SetId(n.Name)
+	return resourceDeployRead(d,m)
 }
 func resourceDeployRead(d *schema.ResourceData, m interface{}) error {
 	//cf := m.(*goftd.FTD)
@@ -62,12 +61,10 @@ func resourceDeployDelete(d *schema.ResourceData, m interface{}) error {
 
 	n := new(goftd.DeployObject)
 	n.Name = d.Get("name").(string)
-	n.SubType = d.Get("subtype").(string)
-	n.Value = d.Get("value").(string)
 
-	err := cf.PostDeploy(n, 1)
+	err := cf.PostDeploy(n)
 	if err != nil {
 		fmt.Errorf("error: %s\n", err)
 	}
-	return resourceDeployCreate(d, m)
+	return nil
 }

@@ -45,31 +45,6 @@ provider "ciscofdm" {
 #    type = "tcpportobject"
 #  }
 #}
-resource "ciscofdm_accessrule" "myaccessrules01" {
-  name = "GSTERRAFORMRULE001"
-  ruleaction = "PERMIT"  
-  intrusionpolicy = {
-    name = "Connectivity Over Security"
-    type = "intrusionpolicy"
-  }
-}
-resource "ciscofdm_accessrule" "myaccessrules02" {
-  name = "GSTERRAFORMRULE002"
-  ruleaction = "PERMIT"
-  sourcenetworks {
-   name = "192.168.126.0"
-   type = "networkobject"
-  } 
-  destinationnetworks {
-   name = "any-ipv4"
-   type = "networkobject"
-  }
-  intrusionpolicy = {
-    name = "Connectivity Over Security"
-    type = "intrusionpolicy"
-  }
-}
-
 resource "ciscofdm_deploy" "deploy" {
   name = "deploy"
   subtype = "deploy"
