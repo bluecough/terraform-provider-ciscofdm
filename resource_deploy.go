@@ -32,8 +32,9 @@ func resourceDeployCreate(d *schema.ResourceData, m interface{}) error {
 	cf := m.(*goftd.FTD)
 
 	n := new(goftd.DeployObject)
-	n.Name = d.Get("name")
-	n.Value = d.Get("value")
+	n.Name = d.Get("name").(string)
+	n.SubType = d.Get("subtype").(string)
+	n.Value = d.Get("value").(string)
 
 	err := cf.PostDeploy(n, 1)
 	if err != nil {
