@@ -11,8 +11,8 @@ Terraform Provider
 Requirements
 ------------
 
--	[Terraform](https://www.terraform.io/downloads.html) 0.10.x
--	[Go](https://golang.org/doc/install) 1.9 (to build the provider plugin)
+-	[Terraform](https://www.terraform.io/downloads.html) 0.10.x and above
+-	[Go](https://golang.org/doc/install) 1.9 (to build the provider plugin) and above
 - Firepower v6.4.x in standalone mode
 
 Installation
@@ -195,3 +195,21 @@ resource "ciscofdm_accessrule" "myaccessrules" {
 | `name`        | Name of an existing zone. Required if destinationzones defined            | Required | string         |
 | `sourcenetworks` | Refer to the network objects                                           |          | string         |
 | `destinationnetworks`  | Refer to the network objects                                     |          | string         |
+
+* All the access control elements are implemented just have not documented in the table.
+
+### `ciscofdm_deploy`
+This ensures that after you implement your rules and so forth you can deploy. If you leave it out you can do a manual deployment via the GUI.
+
+#### Example(s)
+```
+resource "ciscofdm_deploy" "deploy" {
+  name = "deploy"
+  subtype = "deploy"
+  value = "true"
+}
+```
+| Property      | Description                                                               | Default  |  Valid Values  |
+| ------------- | ------------------------------------------------------------------------- | -------  | -------------- |
+| `name`        | The name should be deploy or any string as its not used.                  | Required | string         |
+
