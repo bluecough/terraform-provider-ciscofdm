@@ -215,8 +215,8 @@ resource "ciscofdm_deploy" "deploy" {
 
 
 
-Authors
+### Authors
 George Seeto - bluecough
 
-License
+### License
 This project is licensed under the Apache 2 License - see the LICENSE file for details
