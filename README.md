@@ -219,4 +219,4 @@ resource "ciscofdm_deploy" "deploy" {
 George Seeto - bluecough
 
 ### License
-This project is licensed under the Apache 2 License - see the LICENSE file for details
+This project is licensed under the Apache 2 License - see the [LICENSE](https://github.com/bluecough/terraform-provider-ciscofdm/blob/master/LICENSE) file for details
