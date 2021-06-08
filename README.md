@@ -213,3 +213,10 @@ resource "ciscofdm_deploy" "deploy" {
 | ------------- | ------------------------------------------------------------------------- | -------  | -------------- |
 | `name`        | The name should be deploy or any string as its not used.                  | Required | string         |
 
+
+
+Authors
+George Seeto - bluecough
+
+License
+This project is licensed under the Apache 2 License - see the LICENSE file for details
