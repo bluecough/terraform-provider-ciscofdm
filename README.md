@@ -40,7 +40,7 @@ providers {
   }
 }
 ```
-[![asciicast](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf.svg)](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf)
+
 ## Provider Configuration
 
 ### Example
