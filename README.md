@@ -31,6 +31,10 @@ On OSX. This is needed in order to perform a `terraform init`.
 Create a directory and place the compiled plugin there
 $HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/darwin_amd64
 ```
+On Linux
+```
+$HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/linux_amd64
+```
 Also create a .terraformrc in your home directory
 ```
 providers {
