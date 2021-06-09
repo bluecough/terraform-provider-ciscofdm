@@ -31,6 +31,10 @@ On OSX. This is needed in order to perform a `terraform init`.
 Create a directory and place the compiled plugin there
 $HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/darwin_amd64
 ```
+On Linux
+```
+$HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/linux_amd64
+```
 Also create a .terraformrc in your home directory
 ```
 providers {
@@ -40,6 +44,7 @@ providers {
   }
 }
 ```
+[![asciicast](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf.svg)](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf)
 
 ## Provider Configuration
 
@@ -213,3 +218,10 @@ resource "ciscofdm_deploy" "deploy" {
 | ------------- | ------------------------------------------------------------------------- | -------  | -------------- |
 | `name`        | The name should be deploy or any string as its not used.                  | Required | string         |
 
+
+
+### Authors
+George Seeto - bluecough
+
+### License
+License - see the [LICENSE](https://github.com/bluecough/terraform-provider-ciscofdm/blob/master/LICENSE) file for details
