@@ -13,7 +13,7 @@ Requirements
 
 -	[Terraform](https://www.terraform.io/downloads.html) 0.10.x and above
 -	[Go](https://golang.org/doc/install) 1.9 (to build the provider plugin) and above
-- Firepower v6.4.x in standalone mode
+- Firepower v6.4.x or v6.7 in standalone mode
 
 Installation
 ------------
