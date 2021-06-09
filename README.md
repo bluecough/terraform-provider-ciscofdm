@@ -25,7 +25,7 @@ $ go mod init terraform-provider-ciscofdm
 $ go mod tidy
 $ go build
 ```
-## Update for Terraform 0.15
+## Update for Terraform 0.15+
 On OSX. This is needed in order to perform a `terraform init`.
 ```
 Create a directory and place the compiled plugin there
