@@ -212,7 +212,7 @@ resource "ciscofdm_deploy" "deploy" {
 
 
 
-### Authors
+### Authors & Contributors
 George Seeto - bluecough
 
 ### License
