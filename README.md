@@ -35,15 +35,7 @@ On Linux
 ```
 $HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/linux_amd64
 ```
-Also create a .terraformrc in your home directory
-```
-providers {
-  customplugin = {
-   versions = ["1.0"]
-   source = "registry.terraform.io/hashicorp/ciscofdm"
-  }
-}
-```
+
 [![asciicast](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf.svg)](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf)
 
 ## Provider Configuration
