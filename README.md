@@ -193,7 +193,7 @@ resource "ciscofdm_accessrule" "myaccessrules" {
 | `sourcenetworks` | Refer to the network objects                                           |          | string         |
 | `destinationnetworks`  | Refer to the network objects                                     |          | string         |
 
-* All the access control elements are implemented just have not documented in the table.
+* Most of the access control elements are implemented just have not documented in the table.
 
 ### `ciscofdm_deploy`
 This ensures that after you implement your rules and so forth you can deploy. If you leave it out you can do a manual deployment via the GUI.
