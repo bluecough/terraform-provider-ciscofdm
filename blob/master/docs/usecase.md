@@ -2,7 +2,7 @@
 Using the CiscoFDM provider you will be able to apply Cisco Secure Firewall Port Objects, Port Object Groups, Network Objects, Network Object Groups, and Access Control Polcies
 
 ## Business Case
-This resource will walk you through implementing the CiscoFDM Terraform Provider either through downloading the pre-built binaries to building the plugin with the assumption you have setup your Go environment.
+This resource will walk you through implementing the CiscoFDM Terraform Provider either through downloading the pre-built binaries to building the plugin with the assumption you have setup your Go environment. This provider will allow you to specificially configure some of the elements with the Cisco Secure Firewall in Standalone device manager mode. You should be able to declarative define your infrastructure using this provider.
 
 ### Installing the pre-built binaries
 * Assumptions - Terraform is installed on your laptop.
