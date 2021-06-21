@@ -37,3 +37,6 @@ $ go build
 ```
 Here is a video example of the above.
 [![asciicast](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf.svg)](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf)
+
+## Links to DevNet Learning labs
+* Other related labs in DevNet using [Terraform](https://developer.cisco.com/learning/labs?keywords=terraform)
