@@ -1,4 +1,4 @@
-# Startnow - Using the Cisco Secure Firewall Device Manager Provider with Terraform.
+# Using the Cisco Secure Firewall Device Manager Provider with Terraform.
 Using the CiscoFDM provider you will be able to apply Cisco Secure Firewall Port Objects, Port Object Groups, Network Objects, Network Object Groups, and Access Control Polcies
 
 ## Business Case
