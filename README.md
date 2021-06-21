@@ -13,7 +13,7 @@ Requirements
 
 -	[Terraform](https://www.terraform.io/downloads.html) 0.10.x and above
 -	[Go](https://golang.org/doc/install) 1.9 (to build the provider plugin) and above
-- Firepower v6.4.x in standalone mode
+- Firepower v6.4.x or v6.7 in standalone mode
 
 Installation
 ------------
@@ -25,7 +25,7 @@ $ go mod init terraform-provider-ciscofdm
 $ go mod tidy
 $ go build
 ```
-## Update for Terraform 0.15
+## Update for Terraform 0.15+
 On OSX. This is needed in order to perform a `terraform init`.
 ```
 Create a directory and place the compiled plugin there
@@ -35,15 +35,7 @@ On Linux
 ```
 $HOME/.terraform.d/plugins/registry.terraform.io/hashicorp/ciscofdm/1.0/linux_amd64
 ```
-Also create a .terraformrc in your home directory
-```
-providers {
-  customplugin = {
-   versions = ["1.0"]
-   source = "registry.terraform.io/hashicorp/ciscofdm"
-  }
-}
-```
+
 [![asciicast](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf.svg)](https://asciinema.org/a/VfMFEi1pVPf8nsH8XJXO1LIkf)
 
 ## Provider Configuration
@@ -201,7 +193,7 @@ resource "ciscofdm_accessrule" "myaccessrules" {
 | `sourcenetworks` | Refer to the network objects                                           |          | string         |
 | `destinationnetworks`  | Refer to the network objects                                     |          | string         |
 
-* All the access control elements are implemented just have not documented in the table.
+* Most of the access control elements are implemented just have not documented in the table.
 
 ### `ciscofdm_deploy`
 This ensures that after you implement your rules and so forth you can deploy. If you leave it out you can do a manual deployment via the GUI.
@@ -220,7 +212,7 @@ resource "ciscofdm_deploy" "deploy" {
 
 
 
-### Authors
+### Authors & Contributors
 George Seeto - bluecough
 
 ### License
